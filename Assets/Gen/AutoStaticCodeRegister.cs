@@ -6,27 +6,6 @@ namespace PuertsStaticWrap
     {
         public static void Register(Puerts.JsEnv jsEnv)
         {
-            jsEnv.AddLazyStaticWrapLoader(typeof(Au.AssetSet), Au_AssetSet_Wrap.GetRegisterInfo);
-                
-                
-            jsEnv.AddLazyStaticWrapLoader(typeof(Au.Async), Au_Async_Wrap.GetRegisterInfo);
-                
-                
-            jsEnv.AddLazyStaticWrapLoader(typeof(Au.Files), Au_Files_Wrap.GetRegisterInfo);
-                
-                
-            jsEnv.AddLazyStaticWrapLoader(typeof(Au.I18n), Au_I18n_Wrap.GetRegisterInfo);
-                
-                
-            jsEnv.AddLazyStaticWrapLoader(typeof(Au.Tags), Au_Tags_Wrap.GetRegisterInfo);
-                
-                
-            jsEnv.AddLazyStaticWrapLoader(typeof(Au.Fader), Au_Fader_Wrap.GetRegisterInfo);
-                
-                
-            jsEnv.AddLazyStaticWrapLoader(typeof(Au.TS.TSApp), Au_TS_TSApp_Wrap.GetRegisterInfo);
-                
-                
             jsEnv.AddLazyStaticWrapLoader(typeof(UnityEngine.Vector2), UnityEngine_Vector2_Wrap.GetRegisterInfo);
                 
                 
@@ -147,6 +126,9 @@ namespace PuertsStaticWrap
             jsEnv.AddLazyStaticWrapLoader(typeof(Au.TS.GameObjectExtension), Au_TS_GameObjectExtension_Wrap.GetRegisterInfo);
                 
                 
+            jsEnv.AddLazyStaticWrapLoader(typeof(Au.TS.TSApp), Au_TS_TSApp_Wrap.GetRegisterInfo);
+                
+                
             jsEnv.AddLazyStaticWrapLoader(typeof(Au.TS.Messages.MonoCollision), Au_TS_Messages_MonoCollision_Wrap.GetRegisterInfo);
                 
                 
@@ -175,6 +157,24 @@ namespace PuertsStaticWrap
                 
                 
             jsEnv.AddLazyStaticWrapLoader(typeof(Au.TS.Messages.MonoUpdate), Au_TS_Messages_MonoUpdate_Wrap.GetRegisterInfo);
+                
+                
+            jsEnv.AddLazyStaticWrapLoader(typeof(Au.AssetSet), Au_AssetSet_Wrap.GetRegisterInfo);
+                
+                
+            jsEnv.AddLazyStaticWrapLoader(typeof(Au.Async), Au_Async_Wrap.GetRegisterInfo);
+                
+                
+            jsEnv.AddLazyStaticWrapLoader(typeof(Au.Files), Au_Files_Wrap.GetRegisterInfo);
+                
+                
+            jsEnv.AddLazyStaticWrapLoader(typeof(Au.I18n), Au_I18n_Wrap.GetRegisterInfo);
+                
+                
+            jsEnv.AddLazyStaticWrapLoader(typeof(Au.Tags), Au_Tags_Wrap.GetRegisterInfo);
+                
+                
+            jsEnv.AddLazyStaticWrapLoader(typeof(Au.Fader), Au_Fader_Wrap.GetRegisterInfo);
                 
                 
         }

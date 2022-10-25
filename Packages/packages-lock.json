@@ -143,7 +143,7 @@
       "url": "https://packages.unity.cn"
     },
     "zes.au.core": {
-      "version": "file:../zes.au.core-0.1.9.tgz",
+      "version": "file:../zes.au.core-0.1.10.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {
@@ -165,7 +165,7 @@
       "source": "embedded",
       "dependencies": {
         "com.unity.textmeshpro": "3.0.6",
-        "zes.au.core": "0.1.8",
+        "zes.au.core": "0.1.9",
         "zes.au.ts": "0.3.5"
       }
     },
