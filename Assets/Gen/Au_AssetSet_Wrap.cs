@@ -152,6 +152,48 @@ namespace PuertsStaticWrap
         }
     
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
+        private static void M_CreateChild(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
+        {
+            try
+            {
+                var obj = Puerts.Utils.GetSelf((int)data, self) as Au.AssetSet;
+        
+        
+                {
+            
+                
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
+                
+                
+                    
+                    {
+                    
+                        string arg0 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value0, false);
+                    
+
+                        var result = obj.CreateChild (arg0);
+
+                    
+                        
+                    
+                        Puerts.ResultHelper.Set((int)data, isolate, info, result);
+                        
+                        
+                    }
+                
+                }
+            
+        
+            }
+            catch (Exception e)
+            {
+                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
+            }
+        }
+    
+        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_LoadBundle(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
@@ -388,24 +430,6 @@ namespace PuertsStaticWrap
             }
         }
             
-        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
-        private static void S_parent(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
-        {
-            try
-            {
-                var obj = Puerts.Utils.GetSelf((int)data, self) as Au.AssetSet;
-                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
-                object argobj0 = null;
-                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<Au.AssetSet>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); Au.AssetSet arg0 = (Au.AssetSet)argobj0;
-                obj.parent = arg0;
-                
-            }
-            catch (Exception e)
-            {
-                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
-            }
-        }
-            
     // ==================== properties end ====================
     // ==================== array item get/set start ====================
     
@@ -428,6 +452,7 @@ namespace PuertsStaticWrap
                 {   
                     { new Puerts.MethodKey { Name = "LoadScene", IsStatic = true}, F_LoadScene },
                     { new Puerts.MethodKey { Name = "UnloadScene", IsStatic = true}, F_UnloadScene },
+                    { new Puerts.MethodKey { Name = "CreateChild", IsStatic = false}, M_CreateChild },
                     { new Puerts.MethodKey { Name = "LoadBundle", IsStatic = false}, M_LoadBundle },
                     { new Puerts.MethodKey { Name = "UnloadBundle", IsStatic = false}, M_UnloadBundle },
                     { new Puerts.MethodKey { Name = "UnloadAllBundles", IsStatic = false}, M_UnloadAllBundles },
@@ -437,7 +462,7 @@ namespace PuertsStaticWrap
                 Properties = new System.Collections.Generic.Dictionary<string, Puerts.PropertyRegisterInfo>()
                 {
                     
-                    {"parent", new Puerts.PropertyRegisterInfo(){ IsStatic = false, Getter = G_parent, Setter = S_parent} }
+                    {"parent", new Puerts.PropertyRegisterInfo(){ IsStatic = false, Getter = G_parent, Setter = null} }
                 },
                 LazyMembers = new System.Collections.Generic.List<Puerts.LazyMemberRegisterInfo>()
                 {   

@@ -143,7 +143,7 @@
       "url": "https://packages.unity.cn"
     },
     "zes.au.core": {
-      "version": "file:../zes.au.core-0.1.8.tgz",
+      "version": "file:../zes.au.core-0.1.9.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {
@@ -157,6 +157,16 @@
       "dependencies": {
         "com.tencent.puerts.commonjs": "1.1.0-pre.0",
         "com.tencent.puerts.core": "@1.4.0-rc.6"
+      }
+    },
+    "zes.au.world": {
+      "version": "file:zes.au.world",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.textmeshpro": "3.0.6",
+        "zes.au.core": "0.1.8",
+        "zes.au.ts": "0.3.5"
       }
     },
     "com.unity.modules.ai": {

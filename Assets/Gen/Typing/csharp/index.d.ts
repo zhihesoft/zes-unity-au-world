@@ -234,9 +234,9 @@
         {
             protected [__keep_incompatibility]: never;
             public get parent(): Au.AssetSet;
-            public set parent(value: Au.AssetSet);
             public static LoadScene ($name: string, $additive: boolean, $progress: System.Action$1<number>) : System.Threading.Tasks.Task$1<UnityEngine.SceneManagement.Scene>
             public static UnloadScene ($scene: UnityEngine.SceneManagement.Scene) : System.Threading.Tasks.Task$1<boolean>
+            public CreateChild ($basePath: string) : Au.AssetSet
             public LoadBundle ($name: string, $progress: System.Action$1<number>) : System.Threading.Tasks.Task$1<boolean>
             public UnloadBundle ($name: string) : void
             public UnloadAllBundles () : void

@@ -1,0 +1,19 @@
+{
+  "name": "zes.au.world",
+  "displayName": "Au World",
+  "version": "0.1.0",
+  "description": "Au World",
+  "keywords": ["Au", "Framework", "World", "Library"],
+  "author": {
+    "name": "Stanley Hou",
+    "email": "houyuqing@hotmail.com",
+    "url": "https://github.com/zhihesoft/zes-unity-au-world"
+  },
+  "category": "Libraries",
+  "dependencies": {
+	"com.unity.textmeshpro": "3.0.6",
+	"zes.au.core": "0.1.8",
+	"zes.au.ts": "0.3.5"
+  }
+}
+

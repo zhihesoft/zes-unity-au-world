@@ -1,0 +1,22 @@
+{
+    "name": "zes.au.world.Editor",
+    "rootNamespace": "",
+    "references": [
+        "zes.au.world",
+		"Unity.TextMeshPro",
+		"com.tencent.puerts.core",
+		"com.tencent.puerts.core.Editor",
+        "com.tencent.puerts.commonjs"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,19 @@
+{
+    "name": "zes.au.world",
+    "references": [
+		"Unity.TextMeshPro",
+        "zes.au.core",
+        "zes.au.ts",
+		"com.tencent.puerts.core",
+        "com.tencent.puerts.commonjs"
+	],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
