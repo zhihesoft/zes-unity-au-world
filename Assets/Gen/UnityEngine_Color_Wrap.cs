@@ -4,98 +4,139 @@ using Puerts;
 
 namespace PuertsStaticWrap
 {
-    public static class UnityEngine_Color_Wrap
+    public static class UnityEngine_Color_Wrap 
     {
-
+    
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8ConstructorCallback))]
         private static IntPtr Constructor(IntPtr isolate, IntPtr info, int paramLen, long data)
         {
             try
             {
 
-                if (paramLen == 4)
-                
-                {
+    
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
+                if (paramLen == 4)
+            
+                {
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                    var argHelper2 = new Puerts.ArgumentHelper((int)data, isolate, info, 2);
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
                 
-                    var argHelper3 = new Puerts.ArgumentHelper((int)data, isolate, info, 3);
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
                 
-                    if (argHelper0.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false) && argHelper1.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false) && argHelper2.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false) && argHelper3.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false))
+                    IntPtr v8Value3 = PuertsDLL.GetArgumentValue(info, 3);
+                    object argobj3 = null;
+                    JsValueType argType3 = JsValueType.Invalid;
                 
+                
+                    
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value1, ref argobj1, ref argType1) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value2, ref argobj2, ref argType2) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value3, ref argobj3, ref argType3))
+                    
+
                     {
-                
-                        var Arg0 = argHelper0.GetFloat(false);
                     
-                        var Arg1 = argHelper1.GetFloat(false);
+                        float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
                     
-                        var Arg2 = argHelper2.GetFloat(false);
+                        float arg1 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value1, false);
                     
-                        var Arg3 = argHelper3.GetFloat(false);
+                        float arg2 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value2, false);
                     
-                        var result = new UnityEngine.Color(Arg0, Arg1, Arg2, Arg3);
-                
+                        float arg3 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value3, false);
+                    
+                        var result = new UnityEngine.Color(arg0, arg1, arg2, arg3);
+
+                    
+
+                    
                         return Puerts.Utils.GetObjectPtr((int)data, typeof(UnityEngine.Color), result);
                     
                     }
-                
+                    
                 }
+        
             
                 if (paramLen == 3)
-                
-                {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
+                {
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                    var argHelper2 = new Puerts.ArgumentHelper((int)data, isolate, info, 2);
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
                 
-                    if (argHelper0.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false) && argHelper1.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false) && argHelper2.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false))
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
                 
+                
+                    
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value1, ref argobj1, ref argType1) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value2, ref argobj2, ref argType2))
+                    
+
                     {
-                
-                        var Arg0 = argHelper0.GetFloat(false);
                     
-                        var Arg1 = argHelper1.GetFloat(false);
+                        float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
                     
-                        var Arg2 = argHelper2.GetFloat(false);
+                        float arg1 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value1, false);
                     
-                        var result = new UnityEngine.Color(Arg0, Arg1, Arg2);
-                
+                        float arg2 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value2, false);
+                    
+                        var result = new UnityEngine.Color(arg0, arg1, arg2);
+
+                    
+
+                    
                         return Puerts.Utils.GetObjectPtr((int)data, typeof(UnityEngine.Color), result);
                     
                     }
-                
+                    
                 }
+        
             
                 if (paramLen == 0)
-                
-                {
             
+                {
+                
+                
+                    
+
                     {
-                
+                    
                         var result = new UnityEngine.Color();
-                
+
+                    
+
+                    
                         return Puerts.Utils.GetObjectPtr((int)data, typeof(UnityEngine.Color), result);
                     
                     }
-                
+                    
                 }
-            
+        
+
+
                 Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to " + typeof(UnityEngine.Color).GetFriendlyName() + " constructor");
-    
-    
+
             } catch (Exception e) {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
             return IntPtr.Zero;
         }
-    
+    // ==================== constructor end ====================
+
+    // ==================== methods start ====================
+
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_ToString(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -103,15 +144,21 @@ namespace PuertsStaticWrap
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
         
+        
                 if (paramLen == 0)
             
                 {
             
+                
+                
+                    
                     {
-                
-                        var result = obj.ToString();
-                
-                        Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    
+
+                        var result = obj.ToString ();
+
+                    
+                        Puerts.PuertsDLL.ReturnString(isolate, info, result);
                         Puerts.Utils.SetSelf((int)data, self, obj);
                         return;
                     }
@@ -122,17 +169,26 @@ namespace PuertsStaticWrap
             
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    if (argHelper0.IsMatch(Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.String, typeof(string), false, false))
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                    {
                 
-                        var Arg0 = argHelper0.GetString(false);
                     
-                        var result = obj.ToString(Arg0);
-                
-                        Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.String, typeof(string), false, false, v8Value0, ref argobj0, ref argType0))
+                    
+                    {
+                    
+                        string arg0 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value0, false);
+                    
+
+                        var result = obj.ToString (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnString(isolate, info, result);
                         Puerts.Utils.SetSelf((int)data, self, obj);
                         return;
                     }
@@ -143,27 +199,41 @@ namespace PuertsStaticWrap
             
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                    if (argHelper0.IsMatch(Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.String, typeof(string), false, false) && argHelper1.IsMatch(Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(System.IFormatProvider), false, false))
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
                 
+                
+                    
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.String, typeof(string), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(System.IFormatProvider), false, false, v8Value1, ref argobj1, ref argType1))
+                    
                     {
-                
-                        var Arg0 = argHelper0.GetString(false);
                     
-                        var Arg1 = argHelper1.Get<System.IFormatProvider>(false);
+                        string arg0 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value0, false);
                     
-                        var result = obj.ToString(Arg0, Arg1);
-                
-                        Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                        argobj1 = argobj1 != null ? argobj1 : StaticTranslate<System.IFormatProvider>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false); System.IFormatProvider arg1 = (System.IFormatProvider)argobj1;
+                    
+
+                        var result = obj.ToString (arg0, arg1);
+
+                    
+                        
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnString(isolate, info, result);
                         Puerts.Utils.SetSelf((int)data, self, obj);
                         return;
                     }
                 
                 }
             
+        
                 Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to ToString");
         
             }
@@ -172,7 +242,7 @@ namespace PuertsStaticWrap
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_GetHashCode(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -180,21 +250,28 @@ namespace PuertsStaticWrap
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
         
+        
                 if (paramLen == 0)
             
                 {
             
+                
+                
+                    
                     {
-                
-                        var result = obj.GetHashCode();
-                
-                        Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    
+
+                        var result = obj.GetHashCode ();
+
+                    
+                        Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
                         Puerts.Utils.SetSelf((int)data, self, obj);
                         return;
                     }
                 
                 }
             
+        
                 Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to GetHashCode");
         
             }
@@ -203,7 +280,7 @@ namespace PuertsStaticWrap
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_Equals(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -211,40 +288,56 @@ namespace PuertsStaticWrap
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
         
+        
                 if (paramLen == 1)
             
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    if (argHelper0.IsMatch(Puerts.JsValueType.Any, typeof(System.Object), false, false))
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                    {
                 
-                        var Arg0 = argHelper0.Get<System.Object>(false);
                     
-                        var result = obj.Equals(Arg0);
-                
-                        Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Any, typeof(System.Object), false, false, v8Value0, ref argobj0, ref argType0))
+                    
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<System.Object>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); System.Object arg0 = (System.Object)argobj0;
+                    
+
+                        var result = obj.Equals (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                         Puerts.Utils.SetSelf((int)data, self, obj);
                         return;
                     }
                 
-                    if (argHelper0.IsMatch(Puerts.JsValueType.NativeObject, typeof(UnityEngine.Color), false, false))
-                
-                    {
-                
-                        var Arg0 = argHelper0.Get<UnityEngine.Color>(false);
                     
-                        var result = obj.Equals(Arg0);
-                
-                        Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NativeObject, typeof(UnityEngine.Color), false, false, v8Value0, ref argobj0, ref argType0))
+                    
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Color arg0 = (UnityEngine.Color)argobj0;
+                    
+
+                        var result = obj.Equals (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                         Puerts.Utils.SetSelf((int)data, self, obj);
                         return;
                     }
                 
                 }
             
+        
                 Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to Equals");
         
             }
@@ -253,7 +346,7 @@ namespace PuertsStaticWrap
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void F_Lerp(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -261,24 +354,42 @@ namespace PuertsStaticWrap
             {
                 
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                    var argHelper2 = new Puerts.ArgumentHelper((int)data, isolate, info, 2);
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
                 
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = argHelper0.Get<UnityEngine.Color>(false);
                     
-                        var Arg1 = argHelper1.Get<UnityEngine.Color>(false);
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Color arg0 = (UnityEngine.Color)argobj0;
                     
-                        var Arg2 = argHelper2.GetFloat(false);
+                        argobj1 = argobj1 != null ? argobj1 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false); UnityEngine.Color arg1 = (UnityEngine.Color)argobj1;
                     
-                        var result = UnityEngine.Color.Lerp(Arg0, Arg1, Arg2);
-                
+                        float arg2 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value2, false);
+                    
+
+                        var result = UnityEngine.Color.Lerp (arg0, arg1, arg2);
+
+                    
+                        
+                    
+                        
+                    
+                        
+                    
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
                         
                         
@@ -286,13 +397,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void F_LerpUnclamped(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -300,24 +412,42 @@ namespace PuertsStaticWrap
             {
                 
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                    var argHelper2 = new Puerts.ArgumentHelper((int)data, isolate, info, 2);
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
                 
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = argHelper0.Get<UnityEngine.Color>(false);
                     
-                        var Arg1 = argHelper1.Get<UnityEngine.Color>(false);
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Color arg0 = (UnityEngine.Color)argobj0;
                     
-                        var Arg2 = argHelper2.GetFloat(false);
+                        argobj1 = argobj1 != null ? argobj1 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false); UnityEngine.Color arg1 = (UnityEngine.Color)argobj1;
                     
-                        var result = UnityEngine.Color.LerpUnclamped(Arg0, Arg1, Arg2);
-                
+                        float arg2 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value2, false);
+                    
+
+                        var result = UnityEngine.Color.LerpUnclamped (arg0, arg1, arg2);
+
+                    
+                        
+                    
+                        
+                    
+                        
+                    
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
                         
                         
@@ -325,13 +455,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void F_RGBToHSV(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -339,34 +470,56 @@ namespace PuertsStaticWrap
             {
                 
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                    var argHelper2 = new Puerts.ArgumentHelper((int)data, isolate, info, 2);
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
                 
-                    var argHelper3 = new Puerts.ArgumentHelper((int)data, isolate, info, 3);
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
                 
+                    IntPtr v8Value3 = PuertsDLL.GetArgumentValue(info, 3);
+                    object argobj3 = null;
+                    JsValueType argType3 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = argHelper0.Get<UnityEngine.Color>(false);
                     
-                        var Arg1 = argHelper1.GetFloat(true);
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Color arg0 = (UnityEngine.Color)argobj0;
                     
-                        var Arg2 = argHelper2.GetFloat(true);
+                        float arg1 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value1, true);
                     
-                        var Arg3 = argHelper3.GetFloat(true);
+                        float arg2 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value2, true);
                     
-                        UnityEngine.Color.RGBToHSV(Arg0, out Arg1, out Arg2, out Arg3);
-                
-                        argHelper1.SetByRefValue(Arg1);
+                        float arg3 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value3, true);
+                    
+
+                        UnityEngine.Color.RGBToHSV (arg0, out arg1, out arg2, out arg3);
+
+                    
                         
-                        argHelper2.SetByRefValue(Arg2);
+                    
                         
-                        argHelper3.SetByRefValue(Arg3);
+                        StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToByRefArgument, v8Value1, arg1);
                         
+                    
+                        
+                        StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToByRefArgument, v8Value2, arg2);
+                        
+                    
+                        
+                        StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToByRefArgument, v8Value3, arg3);
+                        
+                    
                         
                         
                         
@@ -374,13 +527,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void F_HSVToRGB(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -388,28 +542,46 @@ namespace PuertsStaticWrap
             {
                 
         
+        
                 if (paramLen == 3)
             
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                    var argHelper2 = new Puerts.ArgumentHelper((int)data, isolate, info, 2);
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
                 
-                    if (argHelper0.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false) && argHelper1.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false) && argHelper2.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false))
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
                 
+                
+                    
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value1, ref argobj1, ref argType1) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value2, ref argobj2, ref argType2))
+                    
                     {
-                
-                        var Arg0 = argHelper0.GetFloat(false);
                     
-                        var Arg1 = argHelper1.GetFloat(false);
+                        float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
                     
-                        var Arg2 = argHelper2.GetFloat(false);
+                        float arg1 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value1, false);
                     
-                        var result = UnityEngine.Color.HSVToRGB(Arg0, Arg1, Arg2);
-                
+                        float arg2 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value2, false);
+                    
+
+                        var result = UnityEngine.Color.HSVToRGB (arg0, arg1, arg2);
+
+                    
+                        
+                    
+                        
+                    
+                        
+                    
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
                         
                         return;
@@ -421,28 +593,49 @@ namespace PuertsStaticWrap
             
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                    var argHelper2 = new Puerts.ArgumentHelper((int)data, isolate, info, 2);
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
                 
-                    var argHelper3 = new Puerts.ArgumentHelper((int)data, isolate, info, 3);
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
                 
-                    if (argHelper0.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false) && argHelper1.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false) && argHelper2.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false) && argHelper3.IsMatch(Puerts.JsValueType.Boolean, typeof(bool), false, false))
+                    IntPtr v8Value3 = PuertsDLL.GetArgumentValue(info, 3);
+                    object argobj3 = null;
+                    JsValueType argType3 = JsValueType.Invalid;
                 
+                
+                    
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value1, ref argobj1, ref argType1) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value2, ref argobj2, ref argType2) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Boolean, typeof(bool), false, false, v8Value3, ref argobj3, ref argType3))
+                    
                     {
-                
-                        var Arg0 = argHelper0.GetFloat(false);
                     
-                        var Arg1 = argHelper1.GetFloat(false);
+                        float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
                     
-                        var Arg2 = argHelper2.GetFloat(false);
+                        float arg1 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value1, false);
                     
-                        var Arg3 = argHelper3.GetBoolean(false);
+                        float arg2 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value2, false);
                     
-                        var result = UnityEngine.Color.HSVToRGB(Arg0, Arg1, Arg2, Arg3);
-                
+                        bool arg3 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value3, false);
+                    
+
+                        var result = UnityEngine.Color.HSVToRGB (arg0, arg1, arg2, arg3);
+
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
                         
                         return;
@@ -450,6 +643,7 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
                 Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to HSVToRGB");
         
             }
@@ -458,7 +652,11 @@ namespace PuertsStaticWrap
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
+    // ==================== methods end ====================
+
+    // ==================== properties start ====================
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void G_red(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -631,7 +829,7 @@ namespace PuertsStaticWrap
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
                 var result = obj.grayscale;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -676,7 +874,7 @@ namespace PuertsStaticWrap
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
                 var result = obj.maxColorComponent;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -691,7 +889,7 @@ namespace PuertsStaticWrap
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
                 var result = obj.r;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -705,8 +903,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.r = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.r = arg0;
                 Puerts.Utils.SetSelf((int)data, self, obj);
             }
             catch (Exception e)
@@ -722,7 +922,7 @@ namespace PuertsStaticWrap
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
                 var result = obj.g;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -736,8 +936,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.g = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.g = arg0;
                 Puerts.Utils.SetSelf((int)data, self, obj);
             }
             catch (Exception e)
@@ -753,7 +955,7 @@ namespace PuertsStaticWrap
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
                 var result = obj.b;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -767,8 +969,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.b = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.b = arg0;
                 Puerts.Utils.SetSelf((int)data, self, obj);
             }
             catch (Exception e)
@@ -784,7 +988,7 @@ namespace PuertsStaticWrap
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
                 var result = obj.a;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -798,8 +1002,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.a = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.a = arg0;
                 Puerts.Utils.SetSelf((int)data, self, obj);
             }
             catch (Exception e)
@@ -808,19 +1014,24 @@ namespace PuertsStaticWrap
             }
         }
             
+    // ==================== properties end ====================
+    // ==================== array item get/set start ====================
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void GetItem(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
-                var keyHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-        
-                if (keyHelper.IsMatch(Puerts.JsValueType.Number, typeof(int), false, false))
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                JsValueType argType0 = JsValueType.Invalid;
+            
+                if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(int), false, false, v8Value0, ref argobj0, ref argType0))
                 {
-                    var key = keyHelper.GetInt32(false);
-                    var result = obj[key];
-                    Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    int arg0 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                    var result = obj[arg0];
+                    Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
                     return;
                 }
             
@@ -831,21 +1042,29 @@ namespace PuertsStaticWrap
             }
         }
         
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void SetItem(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
             {
                 var obj = (UnityEngine.Color)Puerts.Utils.GetSelf((int)data, self);
-                var keyHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                var valueHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
-                if (keyHelper.IsMatch(Puerts.JsValueType.Number, typeof(int), false, false))
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                JsValueType argType0 = JsValueType.Invalid;
+
+            
+                if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(int), false, false, v8Value0, ref argobj0, ref argType0))
                 {
-                    var key = keyHelper.GetInt32(false);
-                    obj[key] = valueHelper.GetFloat(false);
+                    int arg0 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    float arg1 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value1, false);
+
+                    obj[arg0] = arg1;
                     return;
                 }
-            
             }
             catch (Exception e)
             {
@@ -853,23 +1072,34 @@ namespace PuertsStaticWrap
             }
         }
         
+    // ==================== array item get/set end ====================
+    // ==================== operator start ====================
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void O_op_Addition(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
             {
         
+                
                 {
-            
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
+                    
                     {
-                 
-                        var arg0 = argHelper0.Get<UnityEngine.Color>(false);
-                     
-                        var arg1 = argHelper1.Get<UnityEngine.Color>(false);
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Color arg0 = (UnityEngine.Color)argobj0;
+                    
+                        argobj1 = argobj1 != null ? argobj1 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false); UnityEngine.Color arg1 = (UnityEngine.Color)argobj1;
                     
                         var result = arg0 + arg1;
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
@@ -878,30 +1108,39 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void O_op_Subtraction(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
             {
         
+                
                 {
-            
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
+                    
                     {
-                 
-                        var arg0 = argHelper0.Get<UnityEngine.Color>(false);
-                     
-                        var arg1 = argHelper1.Get<UnityEngine.Color>(false);
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Color arg0 = (UnityEngine.Color)argobj0;
+                    
+                        argobj1 = argobj1 != null ? argobj1 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false); UnityEngine.Color arg1 = (UnityEngine.Color)argobj1;
                     
                         var result = arg0 - arg1;
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
@@ -910,60 +1149,73 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void O_op_Multiply(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
             {
         
+                
                 if (paramLen == 2)
-            
+                
                 {
-            
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                    if (argHelper0.IsMatch(Puerts.JsValueType.NativeObject, typeof(UnityEngine.Color), false, false) && argHelper1.IsMatch(Puerts.JsValueType.NativeObject, typeof(UnityEngine.Color), false, false))
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
                 
+                
+                    
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NativeObject, typeof(UnityEngine.Color), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NativeObject, typeof(UnityEngine.Color), false, false, v8Value1, ref argobj1, ref argType1))
+                    
+                    
                     {
-                 
-                        var arg0 = argHelper0.Get<UnityEngine.Color>(false);
-                     
-                        var arg1 = argHelper1.Get<UnityEngine.Color>(false);
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Color arg0 = (UnityEngine.Color)argobj0;
+                    
+                        argobj1 = argobj1 != null ? argobj1 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false); UnityEngine.Color arg1 = (UnityEngine.Color)argobj1;
                     
                         var result = arg0 * arg1;
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
                         return;
                     }
                 
-                    if (argHelper0.IsMatch(Puerts.JsValueType.NativeObject, typeof(UnityEngine.Color), false, false) && argHelper1.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false))
-                
+                    
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NativeObject, typeof(UnityEngine.Color), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value1, ref argobj1, ref argType1))
+                    
+                    
                     {
-                 
-                        var arg0 = argHelper0.Get<UnityEngine.Color>(false);
-                     
-                        var arg1 = argHelper1.GetFloat(false);
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Color arg0 = (UnityEngine.Color)argobj0;
+                    
+                        float arg1 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value1, false);
                     
                         var result = arg0 * arg1;
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
                         return;
                     }
                 
-                    if (argHelper0.IsMatch(Puerts.JsValueType.Number, typeof(float), false, false) && argHelper1.IsMatch(Puerts.JsValueType.NativeObject, typeof(UnityEngine.Color), false, false))
-                
+                    
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NativeObject, typeof(UnityEngine.Color), false, false, v8Value1, ref argobj1, ref argType1))
+                    
+                    
                     {
-                 
-                        var arg0 = argHelper0.GetFloat(false);
-                     
-                        var arg1 = argHelper1.Get<UnityEngine.Color>(false);
+                    
+                        float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                    
+                        argobj1 = argobj1 != null ? argobj1 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false); UnityEngine.Color arg1 = (UnityEngine.Color)argobj1;
                     
                         var result = arg0 * arg1;
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
@@ -972,6 +1224,7 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
                 Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to op_Multiply");
         
             }
@@ -980,24 +1233,32 @@ namespace PuertsStaticWrap
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void O_op_Division(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
             {
         
+                
                 {
-            
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
+                    
                     {
-                 
-                        var arg0 = argHelper0.Get<UnityEngine.Color>(false);
-                     
-                        var arg1 = argHelper1.GetFloat(false);
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Color arg0 = (UnityEngine.Color)argobj0;
+                    
+                        float arg1 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value1, false);
                     
                         var result = arg0 / arg1;
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
@@ -1006,77 +1267,101 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void O_op_Equality(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
             {
         
+                
                 {
-            
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
+                    
                     {
-                 
-                        var arg0 = argHelper0.Get<UnityEngine.Color>(false);
-                     
-                        var arg1 = argHelper1.Get<UnityEngine.Color>(false);
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Color arg0 = (UnityEngine.Color)argobj0;
+                    
+                        argobj1 = argobj1 != null ? argobj1 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false); UnityEngine.Color arg1 = (UnityEngine.Color)argobj1;
                     
                         var result = arg0 == arg1;
-                        Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void O_op_Inequality(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
             {
         
+                
                 {
-            
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
+                    
                     {
-                 
-                        var arg0 = argHelper0.Get<UnityEngine.Color>(false);
-                     
-                        var arg1 = argHelper1.Get<UnityEngine.Color>(false);
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Color arg0 = (UnityEngine.Color)argobj0;
+                    
+                        argobj1 = argobj1 != null ? argobj1 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false); UnityEngine.Color arg1 = (UnityEngine.Color)argobj1;
                     
                         var result = arg0 != arg1;
-                        Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-            
+    
+    // ==================== operator end ====================
+    // ==================== events start ====================
+    
+    // ==================== events end ====================
+
         public static Puerts.TypeRegisterInfo GetRegisterInfo()
         {
             return new Puerts.TypeRegisterInfo()

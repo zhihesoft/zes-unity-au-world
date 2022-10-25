@@ -16,6 +16,9 @@ public class TSExporter
                 typeof(Au.Files),
                 typeof(Au.I18n),
                 typeof(Au.Tags),
+                typeof(Au.Fader),
+
+                typeof(Au.TS.TSApp),
             };
         }
     }

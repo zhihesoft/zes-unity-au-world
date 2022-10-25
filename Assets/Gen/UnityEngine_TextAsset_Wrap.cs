@@ -4,58 +4,80 @@ using Puerts;
 
 namespace PuertsStaticWrap
 {
-    public static class UnityEngine_TextAsset_Wrap
+    public static class UnityEngine_TextAsset_Wrap 
     {
-
+    
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8ConstructorCallback))]
         private static IntPtr Constructor(IntPtr isolate, IntPtr info, int paramLen, long data)
         {
             try
             {
 
-                if (paramLen == 0)
-                
-                {
+    
             
+                if (paramLen == 0)
+            
+                {
+                
+                
+                    
+
                     {
-                
+                    
                         var result = new UnityEngine.TextAsset();
-                
+
+                    
+
+                    
                         return Puerts.Utils.GetObjectPtr((int)data, typeof(UnityEngine.TextAsset), result);
                     
                     }
-                
+                    
                 }
+        
             
                 if (paramLen == 1)
-                
-                {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
+                {
                 
-                    if (argHelper0.IsMatch(Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.String, typeof(string), false, false))
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                    {
                 
-                        var Arg0 = argHelper0.GetString(false);
                     
-                        var result = new UnityEngine.TextAsset(Arg0);
-                
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.String, typeof(string), false, false, v8Value0, ref argobj0, ref argType0))
+                    
+
+                    {
+                    
+                        string arg0 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value0, false);
+                    
+                        var result = new UnityEngine.TextAsset(arg0);
+
+                    
+
+                    
                         return Puerts.Utils.GetObjectPtr((int)data, typeof(UnityEngine.TextAsset), result);
                     
                     }
-                
+                    
                 }
-            
+        
+
+
                 Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to " + typeof(UnityEngine.TextAsset).GetFriendlyName() + " constructor");
-    
-    
+
             } catch (Exception e) {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
             return IntPtr.Zero;
         }
-    
+    // ==================== constructor end ====================
+
+    // ==================== methods start ====================
+
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_ToString(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -63,21 +85,28 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.TextAsset;
         
+        
                 if (paramLen == 0)
             
                 {
             
+                
+                
+                    
                     {
-                
-                        var result = obj.ToString();
-                
-                        Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    
+
+                        var result = obj.ToString ();
+
+                    
+                        Puerts.PuertsDLL.ReturnString(isolate, info, result);
                         
                         return;
                     }
                 
                 }
             
+        
                 Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to ToString");
         
             }
@@ -86,7 +115,11 @@ namespace PuertsStaticWrap
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
+    // ==================== methods end ====================
+
+    // ==================== properties start ====================
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void G_bytes(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -109,7 +142,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.TextAsset;
                 var result = obj.text;
-                Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnString(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -124,14 +157,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.TextAsset;
                 var result = obj.dataSize;
-                Puerts.StaticTranslate<long>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBigInt(isolate, info, result);
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-                
+            
+    // ==================== properties end ====================
+    // ==================== array item get/set start ====================
+    
+    
+    // ==================== array item get/set end ====================
+    // ==================== operator start ====================
+    
+    // ==================== operator end ====================
+    // ==================== events start ====================
+    
+    // ==================== events end ====================
+
         public static Puerts.TypeRegisterInfo GetRegisterInfo()
         {
             return new Puerts.TypeRegisterInfo()

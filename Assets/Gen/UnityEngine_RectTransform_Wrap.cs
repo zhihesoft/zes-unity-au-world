@@ -4,34 +4,47 @@ using Puerts;
 
 namespace PuertsStaticWrap
 {
-    public static class UnityEngine_RectTransform_Wrap
+    public static class UnityEngine_RectTransform_Wrap 
     {
-
+    
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8ConstructorCallback))]
         private static IntPtr Constructor(IntPtr isolate, IntPtr info, int paramLen, long data)
         {
             try
             {
 
-                {
+    
             
+                {
+                
+                
+                    
+
                     {
-                
+                    
                         var result = new UnityEngine.RectTransform();
-                
+
+                    
+
+                    
                         return Puerts.Utils.GetObjectPtr((int)data, typeof(UnityEngine.RectTransform), result);
                     
                     }
-                
+                    
                 }
-            
-    
+        
+
+
             } catch (Exception e) {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
             return IntPtr.Zero;
         }
-    
+    // ==================== constructor end ====================
+
+    // ==================== methods start ====================
+
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_ForceUpdateRectTransforms(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -39,12 +52,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.RectTransform;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.ForceUpdateRectTransforms();
-                
+                    
+
+                        obj.ForceUpdateRectTransforms ();
+
+                    
                         
                         
                         
@@ -52,13 +71,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_GetLocalCorners(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -66,16 +86,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.RectTransform;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.Vector3[]>(false);
+                
                     
-                        obj.GetLocalCorners(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector3[]>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector3[] arg0 = (UnityEngine.Vector3[])argobj0;
+                    
+
+                        obj.GetLocalCorners (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -83,13 +113,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_GetWorldCorners(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -97,16 +128,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.RectTransform;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.Vector3[]>(false);
+                
                     
-                        obj.GetWorldCorners(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector3[]>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector3[] arg0 = (UnityEngine.Vector3[])argobj0;
+                    
+
+                        obj.GetWorldCorners (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -114,13 +155,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_SetInsetAndSizeFromParentEdge(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -128,24 +170,42 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.RectTransform;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                    var argHelper2 = new Puerts.ArgumentHelper((int)data, isolate, info, 2);
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
                 
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = (UnityEngine.RectTransform.Edge)argHelper0.GetInt32(false);
                     
-                        var Arg1 = argHelper1.GetFloat(false);
+                        UnityEngine.RectTransform.Edge arg0 = (UnityEngine.RectTransform.Edge)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
                     
-                        var Arg2 = argHelper2.GetFloat(false);
+                        float arg1 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value1, false);
                     
-                        obj.SetInsetAndSizeFromParentEdge(Arg0, Arg1, Arg2);
-                
+                        float arg2 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value2, false);
+                    
+
+                        obj.SetInsetAndSizeFromParentEdge (arg0, arg1, arg2);
+
+                    
+                        
+                    
+                        
+                    
+                        
+                    
                         
                         
                         
@@ -153,13 +213,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_SetSizeWithCurrentAnchors(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -167,20 +228,34 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.RectTransform;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = (UnityEngine.RectTransform.Axis)argHelper0.GetInt32(false);
                     
-                        var Arg1 = argHelper1.GetFloat(false);
+                        UnityEngine.RectTransform.Axis arg0 = (UnityEngine.RectTransform.Axis)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
                     
-                        obj.SetSizeWithCurrentAnchors(Arg0, Arg1);
-                
+                        float arg1 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value1, false);
+                    
+
+                        obj.SetSizeWithCurrentAnchors (arg0, arg1);
+
+                    
+                        
+                    
+                        
+                    
                         
                         
                         
@@ -188,13 +263,18 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
+    // ==================== methods end ====================
+
+    // ==================== properties start ====================
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void G_rect(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -231,8 +311,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.RectTransform;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.anchorMin = argHelper.Get<UnityEngine.Vector2>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector2 arg0 = (UnityEngine.Vector2)argobj0;
+                obj.anchorMin = arg0;
                 
             }
             catch (Exception e)
@@ -262,8 +344,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.RectTransform;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.anchorMax = argHelper.Get<UnityEngine.Vector2>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector2 arg0 = (UnityEngine.Vector2)argobj0;
+                obj.anchorMax = arg0;
                 
             }
             catch (Exception e)
@@ -293,8 +377,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.RectTransform;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.anchoredPosition = argHelper.Get<UnityEngine.Vector2>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector2 arg0 = (UnityEngine.Vector2)argobj0;
+                obj.anchoredPosition = arg0;
                 
             }
             catch (Exception e)
@@ -324,8 +410,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.RectTransform;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.sizeDelta = argHelper.Get<UnityEngine.Vector2>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector2 arg0 = (UnityEngine.Vector2)argobj0;
+                obj.sizeDelta = arg0;
                 
             }
             catch (Exception e)
@@ -355,8 +443,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.RectTransform;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.pivot = argHelper.Get<UnityEngine.Vector2>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector2 arg0 = (UnityEngine.Vector2)argobj0;
+                obj.pivot = arg0;
                 
             }
             catch (Exception e)
@@ -386,8 +476,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.RectTransform;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.anchoredPosition3D = argHelper.Get<UnityEngine.Vector3>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector3>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector3 arg0 = (UnityEngine.Vector3)argobj0;
+                obj.anchoredPosition3D = arg0;
                 
             }
             catch (Exception e)
@@ -417,8 +509,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.RectTransform;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.offsetMin = argHelper.Get<UnityEngine.Vector2>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector2 arg0 = (UnityEngine.Vector2)argobj0;
+                obj.offsetMin = arg0;
                 
             }
             catch (Exception e)
@@ -448,8 +542,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.RectTransform;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.offsetMax = argHelper.Get<UnityEngine.Vector2>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector2 arg0 = (UnityEngine.Vector2)argobj0;
+                obj.offsetMax = arg0;
                 
             }
             catch (Exception e)
@@ -473,14 +569,26 @@ namespace PuertsStaticWrap
             }
         }
             
+    // ==================== properties end ====================
+    // ==================== array item get/set start ====================
+    
+    
+    // ==================== array item get/set end ====================
+    // ==================== operator start ====================
+    
+    // ==================== operator end ====================
+    // ==================== events start ====================
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void A_reapplyDrivenProperties(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
             {
                 
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                UnityEngine.RectTransform.reapplyDrivenProperties += argHelper.Get<UnityEngine.RectTransform.ReapplyDrivenProperties>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.RectTransform.ReapplyDrivenProperties>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.RectTransform.ReapplyDrivenProperties arg0 = (UnityEngine.RectTransform.ReapplyDrivenProperties)argobj0;
+                UnityEngine.RectTransform.reapplyDrivenProperties += arg0;
             }
             catch (Exception e)
             {
@@ -494,15 +602,19 @@ namespace PuertsStaticWrap
             try
             {
                 
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                UnityEngine.RectTransform.reapplyDrivenProperties -= argHelper.Get<UnityEngine.RectTransform.ReapplyDrivenProperties>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.RectTransform.ReapplyDrivenProperties>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.RectTransform.ReapplyDrivenProperties arg0 = (UnityEngine.RectTransform.ReapplyDrivenProperties)argobj0;
+                UnityEngine.RectTransform.reapplyDrivenProperties -= arg0;
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-                
+            
+    // ==================== events end ====================
+
         public static Puerts.TypeRegisterInfo GetRegisterInfo()
         {
             return new Puerts.TypeRegisterInfo()

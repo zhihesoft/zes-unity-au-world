@@ -4,34 +4,47 @@ using Puerts;
 
 namespace PuertsStaticWrap
 {
-    public static class UnityEngine_Video_VideoPlayer_Wrap
+    public static class UnityEngine_Video_VideoPlayer_Wrap 
     {
-
+    
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8ConstructorCallback))]
         private static IntPtr Constructor(IntPtr isolate, IntPtr info, int paramLen, long data)
         {
             try
             {
 
-                {
+    
             
+                {
+                
+                
+                    
+
                     {
-                
+                    
                         var result = new UnityEngine.Video.VideoPlayer();
-                
+
+                    
+
+                    
                         return Puerts.Utils.GetObjectPtr((int)data, typeof(UnityEngine.Video.VideoPlayer), result);
                     
                     }
-                
+                    
                 }
-            
-    
+        
+
+
             } catch (Exception e) {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
             return IntPtr.Zero;
         }
-    
+    // ==================== constructor end ====================
+
+    // ==================== methods start ====================
+
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_Prepare(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -39,12 +52,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.Prepare();
-                
+                    
+
+                        obj.Prepare ();
+
+                    
                         
                         
                         
@@ -52,13 +71,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_Play(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -66,12 +86,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.Play();
-                
+                    
+
+                        obj.Play ();
+
+                    
                         
                         
                         
@@ -79,13 +105,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_Pause(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -93,12 +120,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.Pause();
-                
+                    
+
+                        obj.Pause ();
+
+                    
                         
                         
                         
@@ -106,13 +139,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_Stop(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -120,12 +154,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.Stop();
-                
+                    
+
+                        obj.Stop ();
+
+                    
                         
                         
                         
@@ -133,13 +173,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_StepForward(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -147,12 +188,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.StepForward();
-                
+                    
+
+                        obj.StepForward ();
+
+                    
                         
                         
                         
@@ -160,13 +207,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_GetAudioLanguageCode(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -174,30 +222,41 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.GetUInt16(false);
+                
                     
-                        var result = obj.GetAudioLanguageCode(Arg0);
-                
-                        Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    {
+                    
+                        ushort arg0 = (ushort)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                    
+
+                        var result = obj.GetAudioLanguageCode (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnString(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_GetAudioChannelCount(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -205,30 +264,41 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.GetUInt16(false);
+                
                     
-                        var result = obj.GetAudioChannelCount(Arg0);
-                
-                        Puerts.StaticTranslate<ushort>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    {
+                    
+                        ushort arg0 = (ushort)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                    
+
+                        var result = obj.GetAudioChannelCount (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_GetAudioSampleRate(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -236,30 +306,41 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.GetUInt16(false);
+                
                     
-                        var result = obj.GetAudioSampleRate(Arg0);
-                
-                        Puerts.StaticTranslate<uint>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    {
+                    
+                        ushort arg0 = (ushort)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                    
+
+                        var result = obj.GetAudioSampleRate (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_EnableAudioTrack(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -267,20 +348,34 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = argHelper0.GetUInt16(false);
                     
-                        var Arg1 = argHelper1.GetBoolean(false);
+                        ushort arg0 = (ushort)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
                     
-                        obj.EnableAudioTrack(Arg0, Arg1);
-                
+                        bool arg1 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value1, false);
+                    
+
+                        obj.EnableAudioTrack (arg0, arg1);
+
+                    
+                        
+                    
+                        
+                    
                         
                         
                         
@@ -288,13 +383,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_IsAudioTrackEnabled(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -302,30 +398,41 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.GetUInt16(false);
+                
                     
-                        var result = obj.IsAudioTrackEnabled(Arg0);
-                
-                        Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    {
+                    
+                        ushort arg0 = (ushort)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                    
+
+                        var result = obj.IsAudioTrackEnabled (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_GetDirectAudioVolume(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -333,30 +440,41 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.GetUInt16(false);
+                
                     
-                        var result = obj.GetDirectAudioVolume(Arg0);
-                
-                        Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    {
+                    
+                        ushort arg0 = (ushort)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                    
+
+                        var result = obj.GetDirectAudioVolume (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_SetDirectAudioVolume(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -364,20 +482,34 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = argHelper0.GetUInt16(false);
                     
-                        var Arg1 = argHelper1.GetFloat(false);
+                        ushort arg0 = (ushort)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
                     
-                        obj.SetDirectAudioVolume(Arg0, Arg1);
-                
+                        float arg1 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value1, false);
+                    
+
+                        obj.SetDirectAudioVolume (arg0, arg1);
+
+                    
+                        
+                    
+                        
+                    
                         
                         
                         
@@ -385,13 +517,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_GetDirectAudioMute(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -399,30 +532,41 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.GetUInt16(false);
+                
                     
-                        var result = obj.GetDirectAudioMute(Arg0);
-                
-                        Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    {
+                    
+                        ushort arg0 = (ushort)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                    
+
+                        var result = obj.GetDirectAudioMute (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_SetDirectAudioMute(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -430,20 +574,34 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = argHelper0.GetUInt16(false);
                     
-                        var Arg1 = argHelper1.GetBoolean(false);
+                        ushort arg0 = (ushort)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
                     
-                        obj.SetDirectAudioMute(Arg0, Arg1);
-                
+                        bool arg1 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value1, false);
+                    
+
+                        obj.SetDirectAudioMute (arg0, arg1);
+
+                    
+                        
+                    
+                        
+                    
                         
                         
                         
@@ -451,13 +609,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_GetTargetAudioSource(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -465,16 +624,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.GetUInt16(false);
+                
                     
-                        var result = obj.GetTargetAudioSource(Arg0);
-                
+                    {
+                    
+                        ushort arg0 = (ushort)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                    
+
+                        var result = obj.GetTargetAudioSource (arg0);
+
+                    
+                        
+                    
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
                         
                         
@@ -482,13 +651,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_SetTargetAudioSource(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -496,20 +666,34 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = argHelper0.GetUInt16(false);
                     
-                        var Arg1 = argHelper1.Get<UnityEngine.AudioSource>(false);
+                        ushort arg0 = (ushort)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
                     
-                        obj.SetTargetAudioSource(Arg0, Arg1);
-                
+                        argobj1 = argobj1 != null ? argobj1 : StaticTranslate<UnityEngine.AudioSource>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false); UnityEngine.AudioSource arg1 = (UnityEngine.AudioSource)argobj1;
+                    
+
+                        obj.SetTargetAudioSource (arg0, arg1);
+
+                    
+                        
+                    
+                        
+                    
                         
                         
                         
@@ -517,13 +701,18 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
+    // ==================== methods end ====================
+
+    // ==================== properties start ====================
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void G_source(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -531,7 +720,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.source;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -545,8 +734,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.source = (UnityEngine.Video.VideoSource)argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                UnityEngine.Video.VideoSource arg0 = (UnityEngine.Video.VideoSource)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                obj.source = arg0;
                 
             }
             catch (Exception e)
@@ -562,7 +753,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.url;
-                Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnString(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -576,8 +767,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.url = argHelper.GetString(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                string arg0 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value0, false);
+                obj.url = arg0;
                 
             }
             catch (Exception e)
@@ -607,8 +800,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.clip = argHelper.Get<UnityEngine.Video.VideoClip>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoClip>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoClip arg0 = (UnityEngine.Video.VideoClip)argobj0;
+                obj.clip = arg0;
                 
             }
             catch (Exception e)
@@ -624,7 +819,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.renderMode;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -638,8 +833,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.renderMode = (UnityEngine.Video.VideoRenderMode)argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                UnityEngine.Video.VideoRenderMode arg0 = (UnityEngine.Video.VideoRenderMode)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                obj.renderMode = arg0;
                 
             }
             catch (Exception e)
@@ -669,8 +866,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.targetCamera = argHelper.Get<UnityEngine.Camera>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Camera>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Camera arg0 = (UnityEngine.Camera)argobj0;
+                obj.targetCamera = arg0;
                 
             }
             catch (Exception e)
@@ -700,8 +899,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.targetTexture = argHelper.Get<UnityEngine.RenderTexture>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.RenderTexture>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.RenderTexture arg0 = (UnityEngine.RenderTexture)argobj0;
+                obj.targetTexture = arg0;
                 
             }
             catch (Exception e)
@@ -731,8 +932,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.targetMaterialRenderer = argHelper.Get<UnityEngine.Renderer>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Renderer>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Renderer arg0 = (UnityEngine.Renderer)argobj0;
+                obj.targetMaterialRenderer = arg0;
                 
             }
             catch (Exception e)
@@ -748,7 +951,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.targetMaterialProperty;
-                Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnString(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -762,8 +965,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.targetMaterialProperty = argHelper.GetString(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                string arg0 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value0, false);
+                obj.targetMaterialProperty = arg0;
                 
             }
             catch (Exception e)
@@ -779,7 +984,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.aspectRatio;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -793,8 +998,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.aspectRatio = (UnityEngine.Video.VideoAspectRatio)argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                UnityEngine.Video.VideoAspectRatio arg0 = (UnityEngine.Video.VideoAspectRatio)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                obj.aspectRatio = arg0;
                 
             }
             catch (Exception e)
@@ -810,7 +1017,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.targetCameraAlpha;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -824,8 +1031,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.targetCameraAlpha = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.targetCameraAlpha = arg0;
                 
             }
             catch (Exception e)
@@ -841,7 +1050,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.targetCamera3DLayout;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -855,8 +1064,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.targetCamera3DLayout = (UnityEngine.Video.Video3DLayout)argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                UnityEngine.Video.Video3DLayout arg0 = (UnityEngine.Video.Video3DLayout)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                obj.targetCamera3DLayout = arg0;
                 
             }
             catch (Exception e)
@@ -887,7 +1098,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.isPrepared;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -902,7 +1113,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.waitForFirstFrame;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -916,8 +1127,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.waitForFirstFrame = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.waitForFirstFrame = arg0;
                 
             }
             catch (Exception e)
@@ -933,7 +1146,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.playOnAwake;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -947,8 +1160,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.playOnAwake = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.playOnAwake = arg0;
                 
             }
             catch (Exception e)
@@ -964,7 +1179,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.isPlaying;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -979,7 +1194,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.isPaused;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -994,7 +1209,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.canSetTime;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1009,7 +1224,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.time;
-                Puerts.StaticTranslate<double>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1023,8 +1238,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.time = argHelper.GetDouble(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                double arg0 = (double)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.time = arg0;
                 
             }
             catch (Exception e)
@@ -1040,7 +1257,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.frame;
-                Puerts.StaticTranslate<long>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBigInt(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1054,8 +1271,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.frame = argHelper.GetInt64(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                long arg0 = (long)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);;
+                obj.frame = arg0;
                 
             }
             catch (Exception e)
@@ -1071,7 +1290,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.clockTime;
-                Puerts.StaticTranslate<double>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1086,7 +1305,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.canStep;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1101,7 +1320,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.canSetPlaybackSpeed;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1116,7 +1335,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.playbackSpeed;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1130,8 +1349,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.playbackSpeed = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.playbackSpeed = arg0;
                 
             }
             catch (Exception e)
@@ -1147,7 +1368,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.isLooping;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1161,8 +1382,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.isLooping = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.isLooping = arg0;
                 
             }
             catch (Exception e)
@@ -1178,7 +1401,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.canSetTimeSource;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1193,7 +1416,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.timeSource;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -1207,8 +1430,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.timeSource = (UnityEngine.Video.VideoTimeSource)argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                UnityEngine.Video.VideoTimeSource arg0 = (UnityEngine.Video.VideoTimeSource)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                obj.timeSource = arg0;
                 
             }
             catch (Exception e)
@@ -1224,7 +1449,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.timeReference;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -1238,8 +1463,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.timeReference = (UnityEngine.Video.VideoTimeReference)argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                UnityEngine.Video.VideoTimeReference arg0 = (UnityEngine.Video.VideoTimeReference)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                obj.timeReference = arg0;
                 
             }
             catch (Exception e)
@@ -1255,7 +1482,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.externalReferenceTime;
-                Puerts.StaticTranslate<double>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1269,8 +1496,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.externalReferenceTime = argHelper.GetDouble(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                double arg0 = (double)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.externalReferenceTime = arg0;
                 
             }
             catch (Exception e)
@@ -1286,7 +1515,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.canSetSkipOnDrop;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1301,7 +1530,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.skipOnDrop;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1315,8 +1544,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.skipOnDrop = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.skipOnDrop = arg0;
                 
             }
             catch (Exception e)
@@ -1332,7 +1563,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.frameCount;
-                Puerts.StaticTranslate<ulong>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBigInt(isolate, info, (long)result);
             }
             catch (Exception e)
             {
@@ -1347,7 +1578,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.frameRate;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1362,7 +1593,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.length;
-                Puerts.StaticTranslate<double>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1377,7 +1608,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.width;
-                Puerts.StaticTranslate<uint>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1392,7 +1623,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.height;
-                Puerts.StaticTranslate<uint>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1407,7 +1638,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.pixelAspectRatioNumerator;
-                Puerts.StaticTranslate<uint>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1422,7 +1653,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.pixelAspectRatioDenominator;
-                Puerts.StaticTranslate<uint>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1437,7 +1668,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.audioTrackCount;
-                Puerts.StaticTranslate<ushort>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1452,7 +1683,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.Video.VideoPlayer.controlledAudioTrackMaxCount;
-                Puerts.StaticTranslate<ushort>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1467,7 +1698,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.controlledAudioTrackCount;
-                Puerts.StaticTranslate<ushort>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1481,8 +1712,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.controlledAudioTrackCount = argHelper.GetUInt16(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                ushort arg0 = (ushort)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.controlledAudioTrackCount = arg0;
                 
             }
             catch (Exception e)
@@ -1498,7 +1731,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.audioOutputMode;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -1512,8 +1745,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.audioOutputMode = (UnityEngine.Video.VideoAudioOutputMode)argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                UnityEngine.Video.VideoAudioOutputMode arg0 = (UnityEngine.Video.VideoAudioOutputMode)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                obj.audioOutputMode = arg0;
                 
             }
             catch (Exception e)
@@ -1529,7 +1764,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.canSetDirectAudioVolume;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1544,7 +1779,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
                 var result = obj.sendFrameReadyEvents;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1558,8 +1793,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.sendFrameReadyEvents = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.sendFrameReadyEvents = arg0;
                 
             }
             catch (Exception e)
@@ -1568,14 +1805,26 @@ namespace PuertsStaticWrap
             }
         }
             
+    // ==================== properties end ====================
+    // ==================== array item get/set start ====================
+    
+    
+    // ==================== array item get/set end ====================
+    // ==================== operator start ====================
+    
+    // ==================== operator end ====================
+    // ==================== events start ====================
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void A_prepareCompleted(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.prepareCompleted += argHelper.Get<UnityEngine.Video.VideoPlayer.EventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.EventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.EventHandler arg0 = (UnityEngine.Video.VideoPlayer.EventHandler)argobj0;
+                obj.prepareCompleted += arg0;
             }
             catch (Exception e)
             {
@@ -1589,8 +1838,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.prepareCompleted -= argHelper.Get<UnityEngine.Video.VideoPlayer.EventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.EventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.EventHandler arg0 = (UnityEngine.Video.VideoPlayer.EventHandler)argobj0;
+                obj.prepareCompleted -= arg0;
             }
             catch (Exception e)
             {
@@ -1604,8 +1855,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.loopPointReached += argHelper.Get<UnityEngine.Video.VideoPlayer.EventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.EventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.EventHandler arg0 = (UnityEngine.Video.VideoPlayer.EventHandler)argobj0;
+                obj.loopPointReached += arg0;
             }
             catch (Exception e)
             {
@@ -1619,8 +1872,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.loopPointReached -= argHelper.Get<UnityEngine.Video.VideoPlayer.EventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.EventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.EventHandler arg0 = (UnityEngine.Video.VideoPlayer.EventHandler)argobj0;
+                obj.loopPointReached -= arg0;
             }
             catch (Exception e)
             {
@@ -1634,8 +1889,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.started += argHelper.Get<UnityEngine.Video.VideoPlayer.EventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.EventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.EventHandler arg0 = (UnityEngine.Video.VideoPlayer.EventHandler)argobj0;
+                obj.started += arg0;
             }
             catch (Exception e)
             {
@@ -1649,8 +1906,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.started -= argHelper.Get<UnityEngine.Video.VideoPlayer.EventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.EventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.EventHandler arg0 = (UnityEngine.Video.VideoPlayer.EventHandler)argobj0;
+                obj.started -= arg0;
             }
             catch (Exception e)
             {
@@ -1664,8 +1923,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.frameDropped += argHelper.Get<UnityEngine.Video.VideoPlayer.EventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.EventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.EventHandler arg0 = (UnityEngine.Video.VideoPlayer.EventHandler)argobj0;
+                obj.frameDropped += arg0;
             }
             catch (Exception e)
             {
@@ -1679,8 +1940,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.frameDropped -= argHelper.Get<UnityEngine.Video.VideoPlayer.EventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.EventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.EventHandler arg0 = (UnityEngine.Video.VideoPlayer.EventHandler)argobj0;
+                obj.frameDropped -= arg0;
             }
             catch (Exception e)
             {
@@ -1694,8 +1957,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.errorReceived += argHelper.Get<UnityEngine.Video.VideoPlayer.ErrorEventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.ErrorEventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.ErrorEventHandler arg0 = (UnityEngine.Video.VideoPlayer.ErrorEventHandler)argobj0;
+                obj.errorReceived += arg0;
             }
             catch (Exception e)
             {
@@ -1709,8 +1974,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.errorReceived -= argHelper.Get<UnityEngine.Video.VideoPlayer.ErrorEventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.ErrorEventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.ErrorEventHandler arg0 = (UnityEngine.Video.VideoPlayer.ErrorEventHandler)argobj0;
+                obj.errorReceived -= arg0;
             }
             catch (Exception e)
             {
@@ -1724,8 +1991,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.seekCompleted += argHelper.Get<UnityEngine.Video.VideoPlayer.EventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.EventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.EventHandler arg0 = (UnityEngine.Video.VideoPlayer.EventHandler)argobj0;
+                obj.seekCompleted += arg0;
             }
             catch (Exception e)
             {
@@ -1739,8 +2008,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.seekCompleted -= argHelper.Get<UnityEngine.Video.VideoPlayer.EventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.EventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.EventHandler arg0 = (UnityEngine.Video.VideoPlayer.EventHandler)argobj0;
+                obj.seekCompleted -= arg0;
             }
             catch (Exception e)
             {
@@ -1754,8 +2025,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.clockResyncOccurred += argHelper.Get<UnityEngine.Video.VideoPlayer.TimeEventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.TimeEventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.TimeEventHandler arg0 = (UnityEngine.Video.VideoPlayer.TimeEventHandler)argobj0;
+                obj.clockResyncOccurred += arg0;
             }
             catch (Exception e)
             {
@@ -1769,8 +2042,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.clockResyncOccurred -= argHelper.Get<UnityEngine.Video.VideoPlayer.TimeEventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.TimeEventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.TimeEventHandler arg0 = (UnityEngine.Video.VideoPlayer.TimeEventHandler)argobj0;
+                obj.clockResyncOccurred -= arg0;
             }
             catch (Exception e)
             {
@@ -1784,8 +2059,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.frameReady += argHelper.Get<UnityEngine.Video.VideoPlayer.FrameReadyEventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.FrameReadyEventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.FrameReadyEventHandler arg0 = (UnityEngine.Video.VideoPlayer.FrameReadyEventHandler)argobj0;
+                obj.frameReady += arg0;
             }
             catch (Exception e)
             {
@@ -1799,15 +2076,19 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.Video.VideoPlayer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.frameReady -= argHelper.Get<UnityEngine.Video.VideoPlayer.FrameReadyEventHandler>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Video.VideoPlayer.FrameReadyEventHandler>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Video.VideoPlayer.FrameReadyEventHandler arg0 = (UnityEngine.Video.VideoPlayer.FrameReadyEventHandler)argobj0;
+                obj.frameReady -= arg0;
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-                
+            
+    // ==================== events end ====================
+
         public static Puerts.TypeRegisterInfo GetRegisterInfo()
         {
             return new Puerts.TypeRegisterInfo()

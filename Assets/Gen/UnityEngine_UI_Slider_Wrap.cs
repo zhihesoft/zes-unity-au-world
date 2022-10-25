@@ -4,24 +4,30 @@ using Puerts;
 
 namespace PuertsStaticWrap
 {
-    public static class UnityEngine_UI_Slider_Wrap
+    public static class UnityEngine_UI_Slider_Wrap 
     {
-
+    
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8ConstructorCallback))]
         private static IntPtr Constructor(IntPtr isolate, IntPtr info, int paramLen, long data)
         {
             try
             {
 
+    
+
+
                 Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to " + typeof(UnityEngine.UI.Slider).GetFriendlyName() + " constructor");
-    
-    
+
             } catch (Exception e) {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
             return IntPtr.Zero;
         }
-    
+    // ==================== constructor end ====================
+
+    // ==================== methods start ====================
+
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_SetValueWithoutNotify(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -29,16 +35,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.GetFloat(false);
+                
                     
-                        obj.SetValueWithoutNotify(Arg0);
-                
+                    {
+                    
+                        float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                    
+
+                        obj.SetValueWithoutNotify (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -46,13 +62,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_Rebuild(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -60,16 +77,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = (UnityEngine.UI.CanvasUpdate)argHelper0.GetInt32(false);
+                
                     
-                        obj.Rebuild(Arg0);
-                
+                    {
+                    
+                        UnityEngine.UI.CanvasUpdate arg0 = (UnityEngine.UI.CanvasUpdate)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                    
+
+                        obj.Rebuild (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -77,13 +104,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_LayoutComplete(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -91,12 +119,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.LayoutComplete();
-                
+                    
+
+                        obj.LayoutComplete ();
+
+                    
                         
                         
                         
@@ -104,13 +138,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_GraphicUpdateComplete(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -118,12 +153,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.GraphicUpdateComplete();
-                
+                    
+
+                        obj.GraphicUpdateComplete ();
+
+                    
                         
                         
                         
@@ -131,13 +172,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnPointerDown(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -145,16 +187,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.PointerEventData>(false);
+                
                     
-                        obj.OnPointerDown(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.PointerEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)argobj0;
+                    
+
+                        obj.OnPointerDown (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -162,13 +214,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnDrag(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -176,16 +229,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.PointerEventData>(false);
+                
                     
-                        obj.OnDrag(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.PointerEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)argobj0;
+                    
+
+                        obj.OnDrag (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -193,13 +256,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnMove(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -207,16 +271,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.AxisEventData>(false);
+                
                     
-                        obj.OnMove(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.AxisEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.AxisEventData arg0 = (UnityEngine.EventSystems.AxisEventData)argobj0;
+                    
+
+                        obj.OnMove (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -224,13 +298,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_FindSelectableOnLeft(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -238,12 +313,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        var result = obj.FindSelectableOnLeft();
-                
+                    
+
+                        var result = obj.FindSelectableOnLeft ();
+
+                    
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
                         
                         
@@ -251,13 +332,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_FindSelectableOnRight(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -265,12 +347,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        var result = obj.FindSelectableOnRight();
-                
+                    
+
+                        var result = obj.FindSelectableOnRight ();
+
+                    
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
                         
                         
@@ -278,13 +366,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_FindSelectableOnUp(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -292,12 +381,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        var result = obj.FindSelectableOnUp();
-                
+                    
+
+                        var result = obj.FindSelectableOnUp ();
+
+                    
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
                         
                         
@@ -305,13 +400,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_FindSelectableOnDown(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -319,12 +415,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        var result = obj.FindSelectableOnDown();
-                
+                    
+
+                        var result = obj.FindSelectableOnDown ();
+
+                    
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
                         
                         
@@ -332,13 +434,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnInitializePotentialDrag(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -346,16 +449,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.PointerEventData>(false);
+                
                     
-                        obj.OnInitializePotentialDrag(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.PointerEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)argobj0;
+                    
+
+                        obj.OnInitializePotentialDrag (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -363,13 +476,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_SetDirection(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -377,20 +491,34 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = (UnityEngine.UI.Slider.Direction)argHelper0.GetInt32(false);
                     
-                        var Arg1 = argHelper1.GetBoolean(false);
+                        UnityEngine.UI.Slider.Direction arg0 = (UnityEngine.UI.Slider.Direction)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
                     
-                        obj.SetDirection(Arg0, Arg1);
-                
+                        bool arg1 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value1, false);
+                    
+
+                        obj.SetDirection (arg0, arg1);
+
+                    
+                        
+                    
+                        
+                    
                         
                         
                         
@@ -398,13 +526,18 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
+    // ==================== methods end ====================
+
+    // ==================== properties start ====================
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void G_fillRect(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -426,8 +559,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.fillRect = argHelper.Get<UnityEngine.RectTransform>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.RectTransform>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.RectTransform arg0 = (UnityEngine.RectTransform)argobj0;
+                obj.fillRect = arg0;
                 
             }
             catch (Exception e)
@@ -457,8 +592,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.handleRect = argHelper.Get<UnityEngine.RectTransform>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.RectTransform>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.RectTransform arg0 = (UnityEngine.RectTransform)argobj0;
+                obj.handleRect = arg0;
                 
             }
             catch (Exception e)
@@ -474,7 +611,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
                 var result = obj.direction;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -488,8 +625,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.direction = (UnityEngine.UI.Slider.Direction)argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                UnityEngine.UI.Slider.Direction arg0 = (UnityEngine.UI.Slider.Direction)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                obj.direction = arg0;
                 
             }
             catch (Exception e)
@@ -505,7 +644,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
                 var result = obj.minValue;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -519,8 +658,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.minValue = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.minValue = arg0;
                 
             }
             catch (Exception e)
@@ -536,7 +677,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
                 var result = obj.maxValue;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -550,8 +691,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.maxValue = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.maxValue = arg0;
                 
             }
             catch (Exception e)
@@ -567,7 +710,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
                 var result = obj.wholeNumbers;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -581,8 +724,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.wholeNumbers = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.wholeNumbers = arg0;
                 
             }
             catch (Exception e)
@@ -598,7 +743,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
                 var result = obj.value;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -612,8 +757,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.value = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.value = arg0;
                 
             }
             catch (Exception e)
@@ -629,7 +776,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
                 var result = obj.normalizedValue;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -643,8 +790,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.normalizedValue = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.normalizedValue = arg0;
                 
             }
             catch (Exception e)
@@ -674,8 +823,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.UI.Slider;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.onValueChanged = argHelper.Get<UnityEngine.UI.Slider.SliderEvent>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.UI.Slider.SliderEvent>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.UI.Slider.SliderEvent arg0 = (UnityEngine.UI.Slider.SliderEvent)argobj0;
+                obj.onValueChanged = arg0;
                 
             }
             catch (Exception e)
@@ -683,7 +834,19 @@ namespace PuertsStaticWrap
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-                
+            
+    // ==================== properties end ====================
+    // ==================== array item get/set start ====================
+    
+    
+    // ==================== array item get/set end ====================
+    // ==================== operator start ====================
+    
+    // ==================== operator end ====================
+    // ==================== events start ====================
+    
+    // ==================== events end ====================
+
         public static Puerts.TypeRegisterInfo GetRegisterInfo()
         {
             return new Puerts.TypeRegisterInfo()

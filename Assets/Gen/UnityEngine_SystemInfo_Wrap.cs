@@ -4,34 +4,47 @@ using Puerts;
 
 namespace PuertsStaticWrap
 {
-    public static class UnityEngine_SystemInfo_Wrap
+    public static class UnityEngine_SystemInfo_Wrap 
     {
-
+    
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8ConstructorCallback))]
         private static IntPtr Constructor(IntPtr isolate, IntPtr info, int paramLen, long data)
         {
             try
             {
 
-                {
+    
             
+                {
+                
+                
+                    
+
                     {
-                
+                    
                         var result = new UnityEngine.SystemInfo();
-                
+
+                    
+
+                    
                         return Puerts.Utils.GetObjectPtr((int)data, typeof(UnityEngine.SystemInfo), result);
                     
                     }
-                
+                    
                 }
-            
-    
+        
+
+
             } catch (Exception e) {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
             return IntPtr.Zero;
         }
-    
+    // ==================== constructor end ====================
+
+    // ==================== methods start ====================
+
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void F_SupportsRenderTextureFormat(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -39,30 +52,41 @@ namespace PuertsStaticWrap
             {
                 
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = (UnityEngine.RenderTextureFormat)argHelper0.GetInt32(false);
+                
                     
-                        var result = UnityEngine.SystemInfo.SupportsRenderTextureFormat(Arg0);
-                
-                        Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    {
+                    
+                        UnityEngine.RenderTextureFormat arg0 = (UnityEngine.RenderTextureFormat)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                    
+
+                        var result = UnityEngine.SystemInfo.SupportsRenderTextureFormat (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void F_SupportsBlendingOnRenderTextureFormat(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -70,30 +94,41 @@ namespace PuertsStaticWrap
             {
                 
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = (UnityEngine.RenderTextureFormat)argHelper0.GetInt32(false);
+                
                     
-                        var result = UnityEngine.SystemInfo.SupportsBlendingOnRenderTextureFormat(Arg0);
-                
-                        Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    {
+                    
+                        UnityEngine.RenderTextureFormat arg0 = (UnityEngine.RenderTextureFormat)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                    
+
+                        var result = UnityEngine.SystemInfo.SupportsBlendingOnRenderTextureFormat (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void F_SupportsRandomWriteOnRenderTextureFormat(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -101,30 +136,41 @@ namespace PuertsStaticWrap
             {
                 
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = (UnityEngine.RenderTextureFormat)argHelper0.GetInt32(false);
+                
                     
-                        var result = UnityEngine.SystemInfo.SupportsRandomWriteOnRenderTextureFormat(Arg0);
-                
-                        Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    {
+                    
+                        UnityEngine.RenderTextureFormat arg0 = (UnityEngine.RenderTextureFormat)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                    
+
+                        var result = UnityEngine.SystemInfo.SupportsRandomWriteOnRenderTextureFormat (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void F_SupportsTextureFormat(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -132,30 +178,41 @@ namespace PuertsStaticWrap
             {
                 
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = (UnityEngine.TextureFormat)argHelper0.GetInt32(false);
+                
                     
-                        var result = UnityEngine.SystemInfo.SupportsTextureFormat(Arg0);
-                
-                        Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    {
+                    
+                        UnityEngine.TextureFormat arg0 = (UnityEngine.TextureFormat)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                    
+
+                        var result = UnityEngine.SystemInfo.SupportsTextureFormat (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void F_SupportsVertexAttributeFormat(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -163,34 +220,49 @@ namespace PuertsStaticWrap
             {
                 
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = (UnityEngine.Rendering.VertexAttributeFormat)argHelper0.GetInt32(false);
                     
-                        var Arg1 = argHelper1.GetInt32(false);
+                        UnityEngine.Rendering.VertexAttributeFormat arg0 = (UnityEngine.Rendering.VertexAttributeFormat)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
                     
-                        var result = UnityEngine.SystemInfo.SupportsVertexAttributeFormat(Arg0, Arg1);
-                
-                        Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                        int arg1 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value1, false);
+                    
+
+                        var result = UnityEngine.SystemInfo.SupportsVertexAttributeFormat (arg0, arg1);
+
+                    
+                        
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void F_IsFormatSupported(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -198,34 +270,49 @@ namespace PuertsStaticWrap
             {
                 
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = (UnityEngine.Experimental.Rendering.GraphicsFormat)argHelper0.GetInt32(false);
                     
-                        var Arg1 = (UnityEngine.Experimental.Rendering.FormatUsage)argHelper1.GetInt32(false);
+                        UnityEngine.Experimental.Rendering.GraphicsFormat arg0 = (UnityEngine.Experimental.Rendering.GraphicsFormat)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
                     
-                        var result = UnityEngine.SystemInfo.IsFormatSupported(Arg0, Arg1);
-                
-                        Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                        UnityEngine.Experimental.Rendering.FormatUsage arg1 = (UnityEngine.Experimental.Rendering.FormatUsage)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value1, false);
+                    
+
+                        var result = UnityEngine.SystemInfo.IsFormatSupported (arg0, arg1);
+
+                    
+                        
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void F_GetCompatibleFormat(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -233,34 +320,49 @@ namespace PuertsStaticWrap
             {
                 
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = (UnityEngine.Experimental.Rendering.GraphicsFormat)argHelper0.GetInt32(false);
                     
-                        var Arg1 = (UnityEngine.Experimental.Rendering.FormatUsage)argHelper1.GetInt32(false);
+                        UnityEngine.Experimental.Rendering.GraphicsFormat arg0 = (UnityEngine.Experimental.Rendering.GraphicsFormat)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
                     
-                        var result = UnityEngine.SystemInfo.GetCompatibleFormat(Arg0, Arg1);
-                
-                        Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                        UnityEngine.Experimental.Rendering.FormatUsage arg1 = (UnityEngine.Experimental.Rendering.FormatUsage)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value1, false);
+                    
+
+                        var result = UnityEngine.SystemInfo.GetCompatibleFormat (arg0, arg1);
+
+                    
+                        
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void F_GetGraphicsFormat(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -268,30 +370,41 @@ namespace PuertsStaticWrap
             {
                 
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = (UnityEngine.Experimental.Rendering.DefaultFormat)argHelper0.GetInt32(false);
+                
                     
-                        var result = UnityEngine.SystemInfo.GetGraphicsFormat(Arg0);
-                
-                        Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                    {
+                    
+                        UnityEngine.Experimental.Rendering.DefaultFormat arg0 = (UnityEngine.Experimental.Rendering.DefaultFormat)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                    
+
+                        var result = UnityEngine.SystemInfo.GetGraphicsFormat (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void F_GetRenderTextureSupportedMSAASampleCount(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -299,30 +412,45 @@ namespace PuertsStaticWrap
             {
                 
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.RenderTextureDescriptor>(false);
+                
                     
-                        var result = UnityEngine.SystemInfo.GetRenderTextureSupportedMSAASampleCount(Arg0);
-                
-                        Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.RenderTextureDescriptor>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.RenderTextureDescriptor arg0 = (UnityEngine.RenderTextureDescriptor)argobj0;
+                    
+
+                        var result = UnityEngine.SystemInfo.GetRenderTextureSupportedMSAASampleCount (arg0);
+
+                    
+                        
+                    
+                        Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
+    // ==================== methods end ====================
+
+    // ==================== properties start ====================
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void G_batteryLevel(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -330,7 +458,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.batteryLevel;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -345,7 +473,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.batteryStatus;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -360,7 +488,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.operatingSystem;
-                Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnString(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -375,7 +503,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.operatingSystemFamily;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -390,7 +518,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.processorType;
-                Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnString(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -405,7 +533,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.processorFrequency;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -420,7 +548,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.processorCount;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -435,7 +563,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.systemMemorySize;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -450,7 +578,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.deviceUniqueIdentifier;
-                Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnString(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -465,7 +593,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.deviceName;
-                Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnString(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -480,7 +608,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.deviceModel;
-                Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnString(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -495,7 +623,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsAccelerometer;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -510,7 +638,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsGyroscope;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -525,7 +653,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsLocationService;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -540,7 +668,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsVibration;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -555,7 +683,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsAudio;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -570,7 +698,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.deviceType;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -585,7 +713,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.graphicsMemorySize;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -600,7 +728,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.graphicsDeviceName;
-                Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnString(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -615,7 +743,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.graphicsDeviceVendor;
-                Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnString(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -630,7 +758,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.graphicsDeviceID;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -645,7 +773,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.graphicsDeviceVendorID;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -660,7 +788,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.graphicsDeviceType;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -675,7 +803,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.graphicsUVStartsAtTop;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -690,7 +818,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.graphicsDeviceVersion;
-                Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnString(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -705,7 +833,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.graphicsShaderLevel;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -720,7 +848,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.graphicsMultiThreaded;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -735,7 +863,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.renderingThreadingMode;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -750,7 +878,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.hasHiddenSurfaceRemovalOnGPU;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -765,7 +893,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.hasDynamicUniformArrayIndexingInFragmentShaders;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -780,7 +908,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsShadows;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -795,7 +923,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsRawShadowDepthSampling;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -810,7 +938,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsMotionVectors;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -825,7 +953,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supports3DTextures;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -840,7 +968,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsCompressed3DTextures;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -855,7 +983,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supports2DArrayTextures;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -870,7 +998,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supports3DRenderTextures;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -885,7 +1013,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsCubemapArrayTextures;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -900,7 +1028,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.copyTextureSupport;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -915,7 +1043,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsComputeShaders;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -930,7 +1058,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsGeometryShaders;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -945,7 +1073,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsTessellationShaders;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -960,7 +1088,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsRenderTargetArrayIndexFromVertexShader;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -975,7 +1103,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsInstancing;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -990,7 +1118,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsHardwareQuadTopology;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1005,7 +1133,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supports32bitsIndexBuffer;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1020,7 +1148,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsSparseTextures;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1035,7 +1163,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportedRenderTargetCount;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1050,7 +1178,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsSeparatedRenderTargetsBlend;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1065,7 +1193,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportedRandomWriteTargetCount;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1080,7 +1208,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsMultisampledTextures;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1095,7 +1223,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsMultisampled2DArrayTextures;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1110,7 +1238,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsMultisampleAutoResolve;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1125,7 +1253,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsTextureWrapMirrorOnce;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1140,7 +1268,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.usesReversedZBuffer;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1155,7 +1283,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.npotSupport;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -1170,7 +1298,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.maxTextureSize;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1185,7 +1313,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.maxCubemapSize;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1200,7 +1328,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.maxComputeBufferInputsVertex;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1215,7 +1343,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.maxComputeBufferInputsFragment;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1230,7 +1358,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.maxComputeBufferInputsGeometry;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1245,7 +1373,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.maxComputeBufferInputsDomain;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1260,7 +1388,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.maxComputeBufferInputsHull;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1275,7 +1403,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.maxComputeBufferInputsCompute;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1290,7 +1418,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.maxComputeWorkGroupSize;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1305,7 +1433,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.maxComputeWorkGroupSizeX;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1320,7 +1448,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.maxComputeWorkGroupSizeY;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1335,7 +1463,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.maxComputeWorkGroupSizeZ;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1350,7 +1478,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsAsyncCompute;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1365,7 +1493,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsGpuRecorder;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1380,7 +1508,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsGraphicsFence;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1395,7 +1523,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsAsyncGPUReadback;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1410,7 +1538,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsRayTracing;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1425,7 +1553,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsSetConstantBuffer;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1440,7 +1568,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.constantBufferOffsetAlignment;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1455,7 +1583,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.maxGraphicsBufferSize;
-                Puerts.StaticTranslate<long>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBigInt(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1470,7 +1598,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.hasMipMaxLevel;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1485,7 +1613,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsMipStreaming;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1500,7 +1628,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.usesLoadStoreActions;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1515,7 +1643,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.hdrDisplaySupportFlags;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -1530,7 +1658,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsConservativeRaster;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1545,7 +1673,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsMultiview;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1560,7 +1688,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsStoreAndResolveAction;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1575,7 +1703,7 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.supportsMultisampleResolveDepth;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1590,14 +1718,26 @@ namespace PuertsStaticWrap
             {
                 
                 var result = UnityEngine.SystemInfo.unsupportedIdentifier;
-                Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnString(isolate, info, result);
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-                
+            
+    // ==================== properties end ====================
+    // ==================== array item get/set start ====================
+    
+    
+    // ==================== array item get/set end ====================
+    // ==================== operator start ====================
+    
+    // ==================== operator end ====================
+    // ==================== events start ====================
+    
+    // ==================== events end ====================
+
         public static Puerts.TypeRegisterInfo GetRegisterInfo()
         {
             return new Puerts.TypeRegisterInfo()

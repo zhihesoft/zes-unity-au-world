@@ -8,8 +8,8 @@
       "url": "https://package.openupm.cn"
     },
     "com.tencent.puerts.core": {
-      "version": "1.4.0-preview.6",
-      "depth": 1,
+      "version": "1.4.0-rc.6",
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://package.openupm.cn"
@@ -143,23 +143,21 @@
       "url": "https://packages.unity.cn"
     },
     "zes.au.core": {
-      "version": "0.1.2",
+      "version": "file:../zes.au.core-0.1.8.tgz",
       "depth": 0,
-      "source": "registry",
+      "source": "local-tarball",
       "dependencies": {
         "com.unity.textmeshpro": "3.0.6"
-      },
-      "url": "https://package.openupm.cn"
+      }
     },
     "zes.au.ts": {
-      "version": "0.3.4",
+      "version": "file:../zes.au.ts-0.3.5.tgz",
       "depth": 0,
-      "source": "registry",
+      "source": "local-tarball",
       "dependencies": {
         "com.tencent.puerts.commonjs": "1.1.0-pre.0",
-        "com.tencent.puerts.core": "1.4.0-preview.6"
-      },
-      "url": "https://package.openupm.cn"
+        "com.tencent.puerts.core": "@1.4.0-rc.6"
+      }
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

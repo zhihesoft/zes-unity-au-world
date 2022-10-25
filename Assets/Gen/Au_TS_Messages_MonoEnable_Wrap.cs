@@ -4,33 +4,50 @@ using Puerts;
 
 namespace PuertsStaticWrap
 {
-    public static class Au_TS_Messages_MonoEnable_Wrap
+    public static class Au_TS_Messages_MonoEnable_Wrap 
     {
-
+    
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8ConstructorCallback))]
         private static IntPtr Constructor(IntPtr isolate, IntPtr info, int paramLen, long data)
         {
             try
             {
 
-                {
+    
             
+                {
+                
+                
+                    
+
                     {
-                
+                    
                         var result = new Au.TS.Messages.MonoEnable();
-                
+
+                    
+
+                    
                         return Puerts.Utils.GetObjectPtr((int)data, typeof(Au.TS.Messages.MonoEnable), result);
                     
                     }
-                
+                    
                 }
-            
-    
+        
+
+
             } catch (Exception e) {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
             return IntPtr.Zero;
         }
+    // ==================== constructor end ====================
+
+    // ==================== methods start ====================
+
+    // ==================== methods end ====================
+
+    // ==================== properties start ====================
     
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void G_action(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
@@ -53,8 +70,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Au.TS.Messages.MonoEnable;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.action = argHelper.Get<System.Action<bool>>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<System.Action<bool>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); System.Action<bool> arg0 = (System.Action<bool>)argobj0;
+                obj.action = arg0;
                 
             }
             catch (Exception e)
@@ -62,7 +81,19 @@ namespace PuertsStaticWrap
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-                
+            
+    // ==================== properties end ====================
+    // ==================== array item get/set start ====================
+    
+    
+    // ==================== array item get/set end ====================
+    // ==================== operator start ====================
+    
+    // ==================== operator end ====================
+    // ==================== events start ====================
+    
+    // ==================== events end ====================
+
         public static Puerts.TypeRegisterInfo GetRegisterInfo()
         {
             return new Puerts.TypeRegisterInfo()

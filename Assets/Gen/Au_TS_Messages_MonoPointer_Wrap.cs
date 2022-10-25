@@ -4,34 +4,47 @@ using Puerts;
 
 namespace PuertsStaticWrap
 {
-    public static class Au_TS_Messages_MonoPointer_Wrap
+    public static class Au_TS_Messages_MonoPointer_Wrap 
     {
-
+    
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8ConstructorCallback))]
         private static IntPtr Constructor(IntPtr isolate, IntPtr info, int paramLen, long data)
         {
             try
             {
 
-                {
+    
             
+                {
+                
+                
+                    
+
                     {
-                
+                    
                         var result = new Au.TS.Messages.MonoPointer();
-                
+
+                    
+
+                    
                         return Puerts.Utils.GetObjectPtr((int)data, typeof(Au.TS.Messages.MonoPointer), result);
                     
                     }
-                
+                    
                 }
-            
-    
+        
+
+
             } catch (Exception e) {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
             return IntPtr.Zero;
         }
-    
+    // ==================== constructor end ====================
+
+    // ==================== methods start ====================
+
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnPointerClick(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -39,16 +52,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Au.TS.Messages.MonoPointer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.PointerEventData>(false);
+                
                     
-                        obj.OnPointerClick(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.PointerEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)argobj0;
+                    
+
+                        obj.OnPointerClick (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -56,13 +79,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnPointerDown(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -70,16 +94,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Au.TS.Messages.MonoPointer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.PointerEventData>(false);
+                
                     
-                        obj.OnPointerDown(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.PointerEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)argobj0;
+                    
+
+                        obj.OnPointerDown (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -87,13 +121,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnPointerMove(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -101,16 +136,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Au.TS.Messages.MonoPointer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.PointerEventData>(false);
+                
                     
-                        obj.OnPointerMove(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.PointerEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)argobj0;
+                    
+
+                        obj.OnPointerMove (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -118,13 +163,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnPointerUp(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -132,16 +178,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Au.TS.Messages.MonoPointer;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.PointerEventData>(false);
+                
                     
-                        obj.OnPointerUp(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.PointerEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)argobj0;
+                    
+
+                        obj.OnPointerUp (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -149,13 +205,18 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
+    // ==================== methods end ====================
+
+    // ==================== properties start ====================
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void G_clickAction(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -177,8 +238,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Au.TS.Messages.MonoPointer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.clickAction = argHelper.Get<System.Action<UnityEngine.EventSystems.PointerEventData>>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<System.Action<UnityEngine.EventSystems.PointerEventData>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); System.Action<UnityEngine.EventSystems.PointerEventData> arg0 = (System.Action<UnityEngine.EventSystems.PointerEventData>)argobj0;
+                obj.clickAction = arg0;
                 
             }
             catch (Exception e)
@@ -208,8 +271,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Au.TS.Messages.MonoPointer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.downAction = argHelper.Get<System.Action<UnityEngine.EventSystems.PointerEventData>>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<System.Action<UnityEngine.EventSystems.PointerEventData>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); System.Action<UnityEngine.EventSystems.PointerEventData> arg0 = (System.Action<UnityEngine.EventSystems.PointerEventData>)argobj0;
+                obj.downAction = arg0;
                 
             }
             catch (Exception e)
@@ -239,8 +304,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Au.TS.Messages.MonoPointer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.upAction = argHelper.Get<System.Action<UnityEngine.EventSystems.PointerEventData>>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<System.Action<UnityEngine.EventSystems.PointerEventData>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); System.Action<UnityEngine.EventSystems.PointerEventData> arg0 = (System.Action<UnityEngine.EventSystems.PointerEventData>)argobj0;
+                obj.upAction = arg0;
                 
             }
             catch (Exception e)
@@ -270,8 +337,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Au.TS.Messages.MonoPointer;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.moveAction = argHelper.Get<System.Action<UnityEngine.EventSystems.PointerEventData>>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<System.Action<UnityEngine.EventSystems.PointerEventData>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); System.Action<UnityEngine.EventSystems.PointerEventData> arg0 = (System.Action<UnityEngine.EventSystems.PointerEventData>)argobj0;
+                obj.moveAction = arg0;
                 
             }
             catch (Exception e)
@@ -279,7 +348,19 @@ namespace PuertsStaticWrap
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-                
+            
+    // ==================== properties end ====================
+    // ==================== array item get/set start ====================
+    
+    
+    // ==================== array item get/set end ====================
+    // ==================== operator start ====================
+    
+    // ==================== operator end ====================
+    // ==================== events start ====================
+    
+    // ==================== events end ====================
+
         public static Puerts.TypeRegisterInfo GetRegisterInfo()
         {
             return new Puerts.TypeRegisterInfo()

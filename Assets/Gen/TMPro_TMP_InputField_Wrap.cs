@@ -4,24 +4,30 @@ using Puerts;
 
 namespace PuertsStaticWrap
 {
-    public static class TMPro_TMP_InputField_Wrap
+    public static class TMPro_TMP_InputField_Wrap 
     {
-
+    
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8ConstructorCallback))]
         private static IntPtr Constructor(IntPtr isolate, IntPtr info, int paramLen, long data)
         {
             try
             {
 
+    
+
+
                 Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to " + typeof(TMPro.TMP_InputField).GetFriendlyName() + " constructor");
-    
-    
+
             } catch (Exception e) {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
             return IntPtr.Zero;
         }
-    
+    // ==================== constructor end ====================
+
+    // ==================== methods start ====================
+
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_SetTextWithoutNotify(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -29,16 +35,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.GetString(false);
+                
                     
-                        obj.SetTextWithoutNotify(Arg0);
-                
+                    {
+                    
+                        string arg0 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value0, false);
+                    
+
+                        obj.SetTextWithoutNotify (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -46,13 +62,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_MoveTextEnd(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -60,16 +77,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.GetBoolean(false);
+                
                     
-                        obj.MoveTextEnd(Arg0);
-                
+                    {
+                    
+                        bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                    
+
+                        obj.MoveTextEnd (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -77,13 +104,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_MoveTextStart(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -91,16 +119,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.GetBoolean(false);
+                
                     
-                        obj.MoveTextStart(Arg0);
-                
+                    {
+                    
+                        bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                    
+
+                        obj.MoveTextStart (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -108,13 +146,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_MoveToEndOfLine(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -122,20 +161,34 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = argHelper0.GetBoolean(false);
                     
-                        var Arg1 = argHelper1.GetBoolean(false);
+                        bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
                     
-                        obj.MoveToEndOfLine(Arg0, Arg1);
-                
+                        bool arg1 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value1, false);
+                    
+
+                        obj.MoveToEndOfLine (arg0, arg1);
+
+                    
+                        
+                    
+                        
+                    
                         
                         
                         
@@ -143,13 +196,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_MoveToStartOfLine(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -157,20 +211,34 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    var argHelper1 = new Puerts.ArgumentHelper((int)data, isolate, info, 1);
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                
+                
+                    
                     {
-                
-                        var Arg0 = argHelper0.GetBoolean(false);
                     
-                        var Arg1 = argHelper1.GetBoolean(false);
+                        bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
                     
-                        obj.MoveToStartOfLine(Arg0, Arg1);
-                
+                        bool arg1 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value1, false);
+                    
+
+                        obj.MoveToStartOfLine (arg0, arg1);
+
+                    
+                        
+                    
+                        
+                    
                         
                         
                         
@@ -178,13 +246,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnBeginDrag(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -192,16 +261,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.PointerEventData>(false);
+                
                     
-                        obj.OnBeginDrag(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.PointerEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)argobj0;
+                    
+
+                        obj.OnBeginDrag (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -209,13 +288,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnDrag(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -223,16 +303,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.PointerEventData>(false);
+                
                     
-                        obj.OnDrag(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.PointerEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)argobj0;
+                    
+
+                        obj.OnDrag (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -240,13 +330,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnEndDrag(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -254,16 +345,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.PointerEventData>(false);
+                
                     
-                        obj.OnEndDrag(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.PointerEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)argobj0;
+                    
+
+                        obj.OnEndDrag (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -271,13 +372,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnPointerDown(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -285,16 +387,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.PointerEventData>(false);
+                
                     
-                        obj.OnPointerDown(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.PointerEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)argobj0;
+                    
+
+                        obj.OnPointerDown (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -302,13 +414,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_ProcessEvent(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -316,16 +429,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.Event>(false);
+                
                     
-                        obj.ProcessEvent(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Event>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Event arg0 = (UnityEngine.Event)argobj0;
+                    
+
+                        obj.ProcessEvent (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -333,13 +456,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnUpdateSelected(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -347,16 +471,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.BaseEventData>(false);
+                
                     
-                        obj.OnUpdateSelected(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.BaseEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.BaseEventData arg0 = (UnityEngine.EventSystems.BaseEventData)argobj0;
+                    
+
+                        obj.OnUpdateSelected (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -364,13 +498,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnScroll(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -378,16 +513,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.PointerEventData>(false);
+                
                     
-                        obj.OnScroll(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.PointerEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)argobj0;
+                    
+
+                        obj.OnScroll (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -395,13 +540,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_ForceLabelUpdate(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -409,12 +555,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.ForceLabelUpdate();
-                
+                    
+
+                        obj.ForceLabelUpdate ();
+
+                    
                         
                         
                         
@@ -422,13 +574,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_Rebuild(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -436,16 +589,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = (UnityEngine.UI.CanvasUpdate)argHelper0.GetInt32(false);
+                
                     
-                        obj.Rebuild(Arg0);
-                
+                    {
+                    
+                        UnityEngine.UI.CanvasUpdate arg0 = (UnityEngine.UI.CanvasUpdate)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                    
+
+                        obj.Rebuild (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -453,13 +616,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_LayoutComplete(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -467,12 +631,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.LayoutComplete();
-                
+                    
+
+                        obj.LayoutComplete ();
+
+                    
                         
                         
                         
@@ -480,13 +650,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_GraphicUpdateComplete(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -494,12 +665,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.GraphicUpdateComplete();
-                
+                    
+
+                        obj.GraphicUpdateComplete ();
+
+                    
                         
                         
                         
@@ -507,13 +684,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_ActivateInputField(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -521,12 +699,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.ActivateInputField();
-                
+                    
+
+                        obj.ActivateInputField ();
+
+                    
                         
                         
                         
@@ -534,13 +718,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnSelect(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -548,16 +733,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.BaseEventData>(false);
+                
                     
-                        obj.OnSelect(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.BaseEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.BaseEventData arg0 = (UnityEngine.EventSystems.BaseEventData)argobj0;
+                    
+
+                        obj.OnSelect (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -565,13 +760,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnPointerClick(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -579,16 +775,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.PointerEventData>(false);
+                
                     
-                        obj.OnPointerClick(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.PointerEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)argobj0;
+                    
+
+                        obj.OnPointerClick (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -596,13 +802,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnControlClick(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -610,12 +817,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.OnControlClick();
-                
+                    
+
+                        obj.OnControlClick ();
+
+                    
                         
                         
                         
@@ -623,13 +836,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_ReleaseSelection(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -637,12 +851,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.ReleaseSelection();
-                
+                    
+
+                        obj.ReleaseSelection ();
+
+                    
                         
                         
                         
@@ -650,13 +870,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_DeactivateInputField(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -664,20 +885,30 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 if (paramLen == 1)
             
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    if (argHelper0.IsMatch(Puerts.JsValueType.Boolean, typeof(bool), false, false))
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                    {
                 
-                        var Arg0 = argHelper0.GetBoolean(false);
                     
-                        obj.DeactivateInputField(Arg0);
-                
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Boolean, typeof(bool), false, false, v8Value0, ref argobj0, ref argType0))
+                    
+                    {
+                    
+                        bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                    
+
+                        obj.DeactivateInputField (arg0);
+
+                    
+                        
+                    
                         
                         
                         return;
@@ -689,10 +920,15 @@ namespace PuertsStaticWrap
             
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.DeactivateInputField();
-                
+                    
+
+                        obj.DeactivateInputField (false);
+
+                    
                         
                         
                         return;
@@ -700,6 +936,7 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
                 Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to DeactivateInputField");
         
             }
@@ -708,7 +945,7 @@ namespace PuertsStaticWrap
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnDeselect(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -716,16 +953,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.BaseEventData>(false);
+                
                     
-                        obj.OnDeselect(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.BaseEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.BaseEventData arg0 = (UnityEngine.EventSystems.BaseEventData)argobj0;
+                    
+
+                        obj.OnDeselect (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -733,13 +980,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_OnSubmit(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -747,16 +995,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.BaseEventData>(false);
+                
                     
-                        obj.OnSubmit(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.BaseEventData>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.BaseEventData arg0 = (UnityEngine.EventSystems.BaseEventData)argobj0;
+                    
+
+                        obj.OnSubmit (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -764,13 +1022,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_CalculateLayoutInputHorizontal(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -778,12 +1037,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.CalculateLayoutInputHorizontal();
-                
+                    
+
+                        obj.CalculateLayoutInputHorizontal ();
+
+                    
                         
                         
                         
@@ -791,13 +1056,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_CalculateLayoutInputVertical(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -805,12 +1071,18 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        obj.CalculateLayoutInputVertical();
-                
+                    
+
+                        obj.CalculateLayoutInputVertical ();
+
+                    
                         
                         
                         
@@ -818,13 +1090,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_SetGlobalPointSize(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -832,16 +1105,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.GetFloat(false);
+                
                     
-                        obj.SetGlobalPointSize(Arg0);
-                
+                    {
+                    
+                        float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                    
+
+                        obj.SetGlobalPointSize (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -849,13 +1132,14 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_SetGlobalFontAsset(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -863,16 +1147,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
         
+        
                 {
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<TMPro.TMP_FontAsset>(false);
+                
                     
-                        obj.SetGlobalFontAsset(Arg0);
-                
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<TMPro.TMP_FontAsset>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); TMPro.TMP_FontAsset arg0 = (TMPro.TMP_FontAsset)argobj0;
+                    
+
+                        obj.SetGlobalFontAsset (arg0);
+
+                    
+                        
+                    
                         
                         
                         
@@ -880,13 +1174,18 @@ namespace PuertsStaticWrap
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
+    // ==================== methods end ====================
+
+    // ==================== properties start ====================
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void G_shouldHideMobileInput(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -894,7 +1193,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.shouldHideMobileInput;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -908,8 +1207,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.shouldHideMobileInput = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.shouldHideMobileInput = arg0;
                 
             }
             catch (Exception e)
@@ -925,7 +1226,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.shouldHideSoftKeyboard;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -939,8 +1240,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.shouldHideSoftKeyboard = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.shouldHideSoftKeyboard = arg0;
                 
             }
             catch (Exception e)
@@ -956,7 +1259,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.text;
-                Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnString(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -970,8 +1273,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.text = argHelper.GetString(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                string arg0 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value0, false);
+                obj.text = arg0;
                 
             }
             catch (Exception e)
@@ -987,7 +1292,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.isFocused;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1002,7 +1307,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.caretBlinkRate;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1016,8 +1321,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.caretBlinkRate = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.caretBlinkRate = arg0;
                 
             }
             catch (Exception e)
@@ -1033,7 +1340,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.caretWidth;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1047,8 +1354,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.caretWidth = argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                int arg0 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.caretWidth = arg0;
                 
             }
             catch (Exception e)
@@ -1078,8 +1387,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.textViewport = argHelper.Get<UnityEngine.RectTransform>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.RectTransform>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.RectTransform arg0 = (UnityEngine.RectTransform)argobj0;
+                obj.textViewport = arg0;
                 
             }
             catch (Exception e)
@@ -1109,8 +1420,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.textComponent = argHelper.Get<TMPro.TMP_Text>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<TMPro.TMP_Text>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); TMPro.TMP_Text arg0 = (TMPro.TMP_Text)argobj0;
+                obj.textComponent = arg0;
                 
             }
             catch (Exception e)
@@ -1140,8 +1453,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.placeholder = argHelper.Get<UnityEngine.UI.Graphic>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.UI.Graphic>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.UI.Graphic arg0 = (UnityEngine.UI.Graphic)argobj0;
+                obj.placeholder = arg0;
                 
             }
             catch (Exception e)
@@ -1171,8 +1486,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.verticalScrollbar = argHelper.Get<UnityEngine.UI.Scrollbar>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.UI.Scrollbar>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.UI.Scrollbar arg0 = (UnityEngine.UI.Scrollbar)argobj0;
+                obj.verticalScrollbar = arg0;
                 
             }
             catch (Exception e)
@@ -1188,7 +1505,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.scrollSensitivity;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1202,8 +1519,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.scrollSensitivity = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.scrollSensitivity = arg0;
                 
             }
             catch (Exception e)
@@ -1233,8 +1552,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.caretColor = argHelper.Get<UnityEngine.Color>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Color arg0 = (UnityEngine.Color)argobj0;
+                obj.caretColor = arg0;
                 
             }
             catch (Exception e)
@@ -1250,7 +1571,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.customCaretColor;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1264,8 +1585,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.customCaretColor = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.customCaretColor = arg0;
                 
             }
             catch (Exception e)
@@ -1295,8 +1618,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.selectionColor = argHelper.Get<UnityEngine.Color>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Color>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Color arg0 = (UnityEngine.Color)argobj0;
+                obj.selectionColor = arg0;
                 
             }
             catch (Exception e)
@@ -1326,8 +1651,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.onEndEdit = argHelper.Get<TMPro.TMP_InputField.SubmitEvent>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<TMPro.TMP_InputField.SubmitEvent>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); TMPro.TMP_InputField.SubmitEvent arg0 = (TMPro.TMP_InputField.SubmitEvent)argobj0;
+                obj.onEndEdit = arg0;
                 
             }
             catch (Exception e)
@@ -1357,8 +1684,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.onSubmit = argHelper.Get<TMPro.TMP_InputField.SubmitEvent>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<TMPro.TMP_InputField.SubmitEvent>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); TMPro.TMP_InputField.SubmitEvent arg0 = (TMPro.TMP_InputField.SubmitEvent)argobj0;
+                obj.onSubmit = arg0;
                 
             }
             catch (Exception e)
@@ -1388,8 +1717,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.onSelect = argHelper.Get<TMPro.TMP_InputField.SelectionEvent>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<TMPro.TMP_InputField.SelectionEvent>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); TMPro.TMP_InputField.SelectionEvent arg0 = (TMPro.TMP_InputField.SelectionEvent)argobj0;
+                obj.onSelect = arg0;
                 
             }
             catch (Exception e)
@@ -1419,8 +1750,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.onDeselect = argHelper.Get<TMPro.TMP_InputField.SelectionEvent>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<TMPro.TMP_InputField.SelectionEvent>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); TMPro.TMP_InputField.SelectionEvent arg0 = (TMPro.TMP_InputField.SelectionEvent)argobj0;
+                obj.onDeselect = arg0;
                 
             }
             catch (Exception e)
@@ -1450,8 +1783,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.onTextSelection = argHelper.Get<TMPro.TMP_InputField.TextSelectionEvent>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<TMPro.TMP_InputField.TextSelectionEvent>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); TMPro.TMP_InputField.TextSelectionEvent arg0 = (TMPro.TMP_InputField.TextSelectionEvent)argobj0;
+                obj.onTextSelection = arg0;
                 
             }
             catch (Exception e)
@@ -1481,8 +1816,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.onEndTextSelection = argHelper.Get<TMPro.TMP_InputField.TextSelectionEvent>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<TMPro.TMP_InputField.TextSelectionEvent>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); TMPro.TMP_InputField.TextSelectionEvent arg0 = (TMPro.TMP_InputField.TextSelectionEvent)argobj0;
+                obj.onEndTextSelection = arg0;
                 
             }
             catch (Exception e)
@@ -1512,8 +1849,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.onValueChanged = argHelper.Get<TMPro.TMP_InputField.OnChangeEvent>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<TMPro.TMP_InputField.OnChangeEvent>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); TMPro.TMP_InputField.OnChangeEvent arg0 = (TMPro.TMP_InputField.OnChangeEvent)argobj0;
+                obj.onValueChanged = arg0;
                 
             }
             catch (Exception e)
@@ -1543,8 +1882,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.onTouchScreenKeyboardStatusChanged = argHelper.Get<TMPro.TMP_InputField.TouchScreenKeyboardEvent>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<TMPro.TMP_InputField.TouchScreenKeyboardEvent>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); TMPro.TMP_InputField.TouchScreenKeyboardEvent arg0 = (TMPro.TMP_InputField.TouchScreenKeyboardEvent)argobj0;
+                obj.onTouchScreenKeyboardStatusChanged = arg0;
                 
             }
             catch (Exception e)
@@ -1574,8 +1915,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.onValidateInput = argHelper.Get<TMPro.TMP_InputField.OnValidateInput>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<TMPro.TMP_InputField.OnValidateInput>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); TMPro.TMP_InputField.OnValidateInput arg0 = (TMPro.TMP_InputField.OnValidateInput)argobj0;
+                obj.onValidateInput = arg0;
                 
             }
             catch (Exception e)
@@ -1591,7 +1934,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.characterLimit;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1605,8 +1948,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.characterLimit = argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                int arg0 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.characterLimit = arg0;
                 
             }
             catch (Exception e)
@@ -1622,7 +1967,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.pointSize;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1636,8 +1981,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.pointSize = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.pointSize = arg0;
                 
             }
             catch (Exception e)
@@ -1667,8 +2014,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.fontAsset = argHelper.Get<TMPro.TMP_FontAsset>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<TMPro.TMP_FontAsset>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); TMPro.TMP_FontAsset arg0 = (TMPro.TMP_FontAsset)argobj0;
+                obj.fontAsset = arg0;
                 
             }
             catch (Exception e)
@@ -1684,7 +2033,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.onFocusSelectAll;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1698,8 +2047,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.onFocusSelectAll = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.onFocusSelectAll = arg0;
                 
             }
             catch (Exception e)
@@ -1715,7 +2066,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.resetOnDeActivation;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1729,8 +2080,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.resetOnDeActivation = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.resetOnDeActivation = arg0;
                 
             }
             catch (Exception e)
@@ -1746,7 +2099,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.restoreOriginalTextOnEscape;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1760,8 +2113,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.restoreOriginalTextOnEscape = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.restoreOriginalTextOnEscape = arg0;
                 
             }
             catch (Exception e)
@@ -1777,7 +2132,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.isRichTextEditingAllowed;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1791,8 +2146,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.isRichTextEditingAllowed = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.isRichTextEditingAllowed = arg0;
                 
             }
             catch (Exception e)
@@ -1808,7 +2165,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.contentType;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -1822,8 +2179,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.contentType = (TMPro.TMP_InputField.ContentType)argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                TMPro.TMP_InputField.ContentType arg0 = (TMPro.TMP_InputField.ContentType)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                obj.contentType = arg0;
                 
             }
             catch (Exception e)
@@ -1839,7 +2198,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.lineType;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -1853,8 +2212,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.lineType = (TMPro.TMP_InputField.LineType)argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                TMPro.TMP_InputField.LineType arg0 = (TMPro.TMP_InputField.LineType)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                obj.lineType = arg0;
                 
             }
             catch (Exception e)
@@ -1870,7 +2231,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.lineLimit;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -1884,8 +2245,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.lineLimit = argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                int arg0 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.lineLimit = arg0;
                 
             }
             catch (Exception e)
@@ -1901,7 +2264,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.inputType;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -1915,8 +2278,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.inputType = (TMPro.TMP_InputField.InputType)argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                TMPro.TMP_InputField.InputType arg0 = (TMPro.TMP_InputField.InputType)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                obj.inputType = arg0;
                 
             }
             catch (Exception e)
@@ -1932,7 +2297,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.keyboardType;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -1946,8 +2311,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.keyboardType = (UnityEngine.TouchScreenKeyboardType)argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                UnityEngine.TouchScreenKeyboardType arg0 = (UnityEngine.TouchScreenKeyboardType)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                obj.keyboardType = arg0;
                 
             }
             catch (Exception e)
@@ -1963,7 +2330,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.characterValidation;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -1977,8 +2344,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.characterValidation = (TMPro.TMP_InputField.CharacterValidation)argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                TMPro.TMP_InputField.CharacterValidation arg0 = (TMPro.TMP_InputField.CharacterValidation)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                obj.characterValidation = arg0;
                 
             }
             catch (Exception e)
@@ -2008,8 +2377,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.inputValidator = argHelper.Get<TMPro.TMP_InputValidator>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<TMPro.TMP_InputValidator>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); TMPro.TMP_InputValidator arg0 = (TMPro.TMP_InputValidator)argobj0;
+                obj.inputValidator = arg0;
                 
             }
             catch (Exception e)
@@ -2025,7 +2396,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.readOnly;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2039,8 +2410,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.readOnly = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.readOnly = arg0;
                 
             }
             catch (Exception e)
@@ -2056,7 +2429,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.richText;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2070,8 +2443,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.richText = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.richText = arg0;
                 
             }
             catch (Exception e)
@@ -2087,7 +2462,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.multiLine;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2116,8 +2491,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.asteriskChar = argHelper.Get<System.Char>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<System.Char>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); System.Char arg0 = (System.Char)argobj0;
+                obj.asteriskChar = arg0;
                 
             }
             catch (Exception e)
@@ -2133,7 +2510,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.wasCanceled;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2148,7 +2525,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.caretPosition;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2162,8 +2539,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.caretPosition = argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                int arg0 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.caretPosition = arg0;
                 
             }
             catch (Exception e)
@@ -2179,7 +2558,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.selectionAnchorPosition;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2193,8 +2572,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.selectionAnchorPosition = argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                int arg0 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.selectionAnchorPosition = arg0;
                 
             }
             catch (Exception e)
@@ -2210,7 +2591,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.selectionFocusPosition;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2224,8 +2605,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.selectionFocusPosition = argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                int arg0 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.selectionFocusPosition = arg0;
                 
             }
             catch (Exception e)
@@ -2241,7 +2624,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.stringPosition;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2255,8 +2638,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.stringPosition = argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                int arg0 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.stringPosition = arg0;
                 
             }
             catch (Exception e)
@@ -2272,7 +2657,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.selectionStringAnchorPosition;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2286,8 +2671,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.selectionStringAnchorPosition = argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                int arg0 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.selectionStringAnchorPosition = arg0;
                 
             }
             catch (Exception e)
@@ -2303,7 +2690,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.selectionStringFocusPosition;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2317,8 +2704,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.selectionStringFocusPosition = argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                int arg0 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.selectionStringFocusPosition = arg0;
                 
             }
             catch (Exception e)
@@ -2334,7 +2723,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.minWidth;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2349,7 +2738,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.preferredWidth;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2364,7 +2753,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.flexibleWidth;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2379,7 +2768,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.minHeight;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2394,7 +2783,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.preferredHeight;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2409,7 +2798,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.flexibleHeight;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -2424,14 +2813,26 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as TMPro.TMP_InputField;
                 var result = obj.layoutPriority;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-                
+            
+    // ==================== properties end ====================
+    // ==================== array item get/set start ====================
+    
+    
+    // ==================== array item get/set end ====================
+    // ==================== operator start ====================
+    
+    // ==================== operator end ====================
+    // ==================== events start ====================
+    
+    // ==================== events end ====================
+
         public static Puerts.TypeRegisterInfo GetRegisterInfo()
         {
             return new Puerts.TypeRegisterInfo()

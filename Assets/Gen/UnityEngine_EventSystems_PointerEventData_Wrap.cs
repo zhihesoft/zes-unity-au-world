@@ -4,38 +4,53 @@ using Puerts;
 
 namespace PuertsStaticWrap
 {
-    public static class UnityEngine_EventSystems_PointerEventData_Wrap
+    public static class UnityEngine_EventSystems_PointerEventData_Wrap 
     {
-
+    
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8ConstructorCallback))]
         private static IntPtr Constructor(IntPtr isolate, IntPtr info, int paramLen, long data)
         {
             try
             {
 
-                {
+    
             
-                    var argHelper0 = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
+                {
                 
-                    {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
                 
-                        var Arg0 = argHelper0.Get<UnityEngine.EventSystems.EventSystem>(false);
+                
                     
-                        var result = new UnityEngine.EventSystems.PointerEventData(Arg0);
-                
+
+                    {
+                    
+                        argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.EventSystem>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.EventSystem arg0 = (UnityEngine.EventSystems.EventSystem)argobj0;
+                    
+                        var result = new UnityEngine.EventSystems.PointerEventData(arg0);
+
+                    
+
+                    
                         return Puerts.Utils.GetObjectPtr((int)data, typeof(UnityEngine.EventSystems.PointerEventData), result);
                     
                     }
-                
+                    
                 }
-            
-    
+        
+
+
             } catch (Exception e) {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
             return IntPtr.Zero;
         }
-    
+    // ==================== constructor end ====================
+
+    // ==================== methods start ====================
+
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_IsPointerMoving(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -43,26 +58,33 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        var result = obj.IsPointerMoving();
-                
-                        Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    
+
+                        var result = obj.IsPointerMoving ();
+
+                    
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_IsScrolling(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -70,26 +92,33 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        var result = obj.IsScrolling();
-                
-                        Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    
+
+                        var result = obj.IsScrolling ();
+
+                    
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void M_ToString(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -97,26 +126,37 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
         
+        
                 {
             
+                
+                
+                    
                     {
-                
-                        var result = obj.ToString();
-                
-                        Puerts.StaticTranslate<string>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                    
+
+                        var result = obj.ToString ();
+
+                    
+                        Puerts.PuertsDLL.ReturnString(isolate, info, result);
                         
                         
                     }
                 
                 }
             
+        
             }
             catch (Exception e)
             {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-        
+    
+    // ==================== methods end ====================
+
+    // ==================== properties start ====================
+    
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         private static void G_pointerEnter(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
@@ -138,8 +178,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.pointerEnter = argHelper.Get<UnityEngine.GameObject>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.GameObject>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.GameObject arg0 = (UnityEngine.GameObject)argobj0;
+                obj.pointerEnter = arg0;
                 
             }
             catch (Exception e)
@@ -184,8 +226,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.rawPointerPress = argHelper.Get<UnityEngine.GameObject>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.GameObject>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.GameObject arg0 = (UnityEngine.GameObject)argobj0;
+                obj.rawPointerPress = arg0;
                 
             }
             catch (Exception e)
@@ -215,8 +259,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.pointerDrag = argHelper.Get<UnityEngine.GameObject>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.GameObject>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.GameObject arg0 = (UnityEngine.GameObject)argobj0;
+                obj.pointerDrag = arg0;
                 
             }
             catch (Exception e)
@@ -246,8 +292,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.pointerClick = argHelper.Get<UnityEngine.GameObject>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.GameObject>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.GameObject arg0 = (UnityEngine.GameObject)argobj0;
+                obj.pointerClick = arg0;
                 
             }
             catch (Exception e)
@@ -277,8 +325,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.pointerCurrentRaycast = argHelper.Get<UnityEngine.EventSystems.RaycastResult>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.RaycastResult>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.RaycastResult arg0 = (UnityEngine.EventSystems.RaycastResult)argobj0;
+                obj.pointerCurrentRaycast = arg0;
                 
             }
             catch (Exception e)
@@ -308,8 +358,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.pointerPressRaycast = argHelper.Get<UnityEngine.EventSystems.RaycastResult>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.EventSystems.RaycastResult>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.EventSystems.RaycastResult arg0 = (UnityEngine.EventSystems.RaycastResult)argobj0;
+                obj.pointerPressRaycast = arg0;
                 
             }
             catch (Exception e)
@@ -325,7 +377,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
                 var result = obj.eligibleForClick;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -339,8 +391,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.eligibleForClick = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.eligibleForClick = arg0;
                 
             }
             catch (Exception e)
@@ -356,7 +410,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
                 var result = obj.pointerId;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -370,8 +424,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.pointerId = argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                int arg0 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.pointerId = arg0;
                 
             }
             catch (Exception e)
@@ -401,8 +457,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.position = argHelper.Get<UnityEngine.Vector2>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector2 arg0 = (UnityEngine.Vector2)argobj0;
+                obj.position = arg0;
                 
             }
             catch (Exception e)
@@ -432,8 +490,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.delta = argHelper.Get<UnityEngine.Vector2>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector2 arg0 = (UnityEngine.Vector2)argobj0;
+                obj.delta = arg0;
                 
             }
             catch (Exception e)
@@ -463,8 +523,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.pressPosition = argHelper.Get<UnityEngine.Vector2>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector2 arg0 = (UnityEngine.Vector2)argobj0;
+                obj.pressPosition = arg0;
                 
             }
             catch (Exception e)
@@ -480,7 +542,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
                 var result = obj.clickTime;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -494,8 +556,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.clickTime = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.clickTime = arg0;
                 
             }
             catch (Exception e)
@@ -511,7 +575,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
                 var result = obj.clickCount;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -525,8 +589,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.clickCount = argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                int arg0 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.clickCount = arg0;
                 
             }
             catch (Exception e)
@@ -556,8 +622,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.scrollDelta = argHelper.Get<UnityEngine.Vector2>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector2 arg0 = (UnityEngine.Vector2)argobj0;
+                obj.scrollDelta = arg0;
                 
             }
             catch (Exception e)
@@ -573,7 +641,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
                 var result = obj.useDragThreshold;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -587,8 +655,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.useDragThreshold = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.useDragThreshold = arg0;
                 
             }
             catch (Exception e)
@@ -604,7 +674,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
                 var result = obj.dragging;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -618,8 +688,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.dragging = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.dragging = arg0;
                 
             }
             catch (Exception e)
@@ -635,7 +707,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
                 var result = obj.button;
-                Puerts.StaticTranslate<int>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, (int)result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, (int)result);
             }
             catch (Exception e)
             {
@@ -649,8 +721,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.button = (UnityEngine.EventSystems.PointerEventData.InputButton)argHelper.GetInt32(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                UnityEngine.EventSystems.PointerEventData.InputButton arg0 = (UnityEngine.EventSystems.PointerEventData.InputButton)StaticTranslate<int>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value0, false);
+                obj.button = arg0;
                 
             }
             catch (Exception e)
@@ -666,7 +740,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
                 var result = obj.pressure;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -680,8 +754,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.pressure = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.pressure = arg0;
                 
             }
             catch (Exception e)
@@ -697,7 +773,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
                 var result = obj.tangentialPressure;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -711,8 +787,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.tangentialPressure = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.tangentialPressure = arg0;
                 
             }
             catch (Exception e)
@@ -728,7 +806,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
                 var result = obj.altitudeAngle;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -742,8 +820,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.altitudeAngle = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.altitudeAngle = arg0;
                 
             }
             catch (Exception e)
@@ -759,7 +839,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
                 var result = obj.azimuthAngle;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -773,8 +853,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.azimuthAngle = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.azimuthAngle = arg0;
                 
             }
             catch (Exception e)
@@ -790,7 +872,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
                 var result = obj.twist;
-                Puerts.StaticTranslate<float>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnNumber(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -804,8 +886,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.twist = argHelper.GetFloat(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                float arg0 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value0, false);
+                obj.twist = arg0;
                 
             }
             catch (Exception e)
@@ -835,8 +919,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.radius = argHelper.Get<UnityEngine.Vector2>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector2 arg0 = (UnityEngine.Vector2)argobj0;
+                obj.radius = arg0;
                 
             }
             catch (Exception e)
@@ -866,8 +952,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.radiusVariance = argHelper.Get<UnityEngine.Vector2>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.Vector2 arg0 = (UnityEngine.Vector2)argobj0;
+                obj.radiusVariance = arg0;
                 
             }
             catch (Exception e)
@@ -883,7 +971,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
                 var result = obj.fullyExited;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -897,8 +985,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.fullyExited = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.fullyExited = arg0;
                 
             }
             catch (Exception e)
@@ -914,7 +1004,7 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
                 var result = obj.reentered;
-                Puerts.StaticTranslate<bool>.Set((int)data, isolate, Puerts.NativeValueApi.SetValueToResult, info, result);
+                Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
             }
             catch (Exception e)
             {
@@ -928,8 +1018,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.reentered = argHelper.GetBoolean(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                bool arg0 = (bool)PuertsDLL.GetBooleanFromValue(isolate, v8Value0, false);
+                obj.reentered = arg0;
                 
             }
             catch (Exception e)
@@ -989,8 +1081,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.pointerPress = argHelper.Get<UnityEngine.GameObject>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<UnityEngine.GameObject>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); UnityEngine.GameObject arg0 = (UnityEngine.GameObject)argobj0;
+                obj.pointerPress = arg0;
                 
             }
             catch (Exception e)
@@ -1020,8 +1114,10 @@ namespace PuertsStaticWrap
             try
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.EventSystems.PointerEventData;
-                var argHelper = new Puerts.ArgumentHelper((int)data, isolate, info, 0);
-                obj.hovered = argHelper.Get<System.Collections.Generic.List<UnityEngine.GameObject>>(false);
+                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(info, 0);
+                object argobj0 = null;
+                argobj0 = argobj0 != null ? argobj0 : StaticTranslate<System.Collections.Generic.List<UnityEngine.GameObject>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false); System.Collections.Generic.List<UnityEngine.GameObject> arg0 = (System.Collections.Generic.List<UnityEngine.GameObject>)argobj0;
+                obj.hovered = arg0;
                 
             }
             catch (Exception e)
@@ -1029,7 +1125,19 @@ namespace PuertsStaticWrap
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
         }
-                
+            
+    // ==================== properties end ====================
+    // ==================== array item get/set start ====================
+    
+    
+    // ==================== array item get/set end ====================
+    // ==================== operator start ====================
+    
+    // ==================== operator end ====================
+    // ==================== events start ====================
+    
+    // ==================== events end ====================
+
         public static Puerts.TypeRegisterInfo GetRegisterInfo()
         {
             return new Puerts.TypeRegisterInfo()
