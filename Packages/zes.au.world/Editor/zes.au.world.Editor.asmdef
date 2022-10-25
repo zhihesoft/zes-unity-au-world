@@ -2,6 +2,8 @@
     "name": "zes.au.world.Editor",
     "rootNamespace": "",
     "references": [
+        "zes.au.core",
+        "zes.au.ts",
         "zes.au.world",
 		"Unity.TextMeshPro",
 		"com.tencent.puerts.core",

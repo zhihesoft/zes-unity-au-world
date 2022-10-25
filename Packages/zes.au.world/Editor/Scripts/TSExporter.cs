@@ -2,15 +2,17 @@ using Puerts;
 using System;
 using System.Collections.Generic;
 
-[Configure]
-public class TSExporter
+namespace Au.World
 {
-    [Binding]
-    public static IEnumerable<Type> bindings
+    [Configure]
+    public class TSExporter
     {
-        get
+        [Binding]
+        public static IEnumerable<Type> bindings
         {
-            return new[] {
+            get
+            {
+                return new[] {
                 typeof(Au.AssetSet),
                 typeof(Au.Async),
                 typeof(Au.Files),
@@ -20,6 +22,8 @@ public class TSExporter
 
                 typeof(Au.TS.TSApp),
             };
+            }
         }
     }
 }
+
