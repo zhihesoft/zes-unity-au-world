@@ -1,7 +1,7 @@
 {
   "name": "zes.au.world",
   "displayName": "Au World",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Au World",
   "keywords": ["Au", "Framework", "World", "Library"],
   "author": {
@@ -12,7 +12,7 @@
   "category": "Libraries",
   "dependencies": {
 	"com.unity.textmeshpro": "3.0.6",
-	"zes.au.core": "0.1.8",
+	"zes.au.core": "0.1.9",
 	"zes.au.ts": "0.3.5"
   }
 }
