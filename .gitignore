@@ -3,9 +3,9 @@
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
 
-com.leadinvr.sample/.vscode/
-com.leadinvr.sample/node_modules/
-com.leadinvr.sample/out/
+Typescripts/com.leadinvr.sample/.vscode/
+Typescripts/com.leadinvr.sample/node_modules/
+Typescripts/com.leadinvr.sample/out/
 .vsconfig
 UserSettings/
 /[Ll]ibrary/
