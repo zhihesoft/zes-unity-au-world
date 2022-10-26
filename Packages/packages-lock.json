@@ -142,8 +142,15 @@
       },
       "url": "https://packages.unity.cn"
     },
+    "io.github.icsharpcode.sharpziplib": {
+      "version": "1.2.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.cn"
+    },
     "zes.au.core": {
-      "version": "file:../zes.au.core-0.1.15.tgz",
+      "version": "file:../zes.au.core-0.1.16.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {
@@ -151,7 +158,7 @@
       }
     },
     "zes.au.ts": {
-      "version": "file:../zes.au.ts-0.3.6.tgz",
+      "version": "file:../zes.au.ts-0.3.8.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {
@@ -164,6 +171,7 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
+        "io.github.icsharpcode.sharpziplib": "1.2.0",
         "com.unity.textmeshpro": "3.0.6",
         "zes.au.core": "0.1.10",
         "zes.au.ts": "0.3.5"

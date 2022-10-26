@@ -5,6 +5,11 @@ using UnityEditor.UIElements;
 using Au;
 using System.IO;
 using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
+using System.Linq;
+using NUnit.Framework.Internal;
+using System.Collections.Generic;
+using UnityEngine.Rendering.VirtualTexturing;
 
 public class WorldSettings : EditorWindow
 {
@@ -61,6 +66,23 @@ public class WorldSettings : EditorWindow
             config.version = EditorGUILayout.TextField("Version", config.version);
             config.displayName = EditorGUILayout.TextField("Display Name", config.displayName);
             config.entry = EditorGUILayout.TextField("Entry", config.entry);
+            EditorGUILayout.LabelField("Assets");
+            using (new EditorGUILayout.VerticalScope(EditorStyles.helpBox))
+            {
+                if (config.assets != null && config.assets.Count > 0)
+                {
+                    config.assets
+                        .ToList()
+                        .ForEach(entry =>
+                        {
+                            EditorGUILayout.LabelField(entry.Key, $"{entry.Value.hash} ({entry.Value.size})");
+                        });
+                }
+                else
+                {
+                    EditorGUILayout.LabelField("Empty");
+                }
+            }
 
             EditorGUILayout.LabelField("");
 
@@ -90,11 +112,44 @@ public class WorldSettings : EditorWindow
         async void BuildWorld()
         {
             await Task.Yield();
+
+            if (!BuildJavascript())
+            {
+                Debug.LogError("Build javascript failed !");
+                return;
+            }
+
             string inputPath = Path.Combine("Assets", "Worlds", config.id);
             string outputPath = Path.Combine("Temp", "Worlds", config.id);
             AssetSetBuilder.BuildBundles(inputPath, outputPath);
             AssetDatabase.Refresh();
             Debug.Log("Build world done !");
+        }
+
+        bool BuildJavascript()
+        {
+            string projectPath = Path.Combine("Typescripts", config.id);
+            string releasePath = Path.Combine("Typescripts", config.id, "out", "main.bytes");
+            string targetPath = Path.Combine("Assets", "Worlds", config.id, "js", "main.bytes");
+
+            var exitCode = Shell.Run("gulp", new List<string> { "build" }, projectPath);
+            if (exitCode != 0)
+            {
+                Debug.LogError("build ts source failed with code " + exitCode);
+                return false;
+            }
+
+            var source = new FileInfo(releasePath);
+            if (!source.Exists)
+            {
+                Debug.LogError($"{source.FullName} not existed");
+                return false;
+            }
+
+            Files.EnsureDir(new FileInfo(targetPath).Directory);
+            source.CopyTo(targetPath, true);
+            return true;
+
         }
     }
 }

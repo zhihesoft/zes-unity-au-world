@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace Au
         public string displayName;
         public string version;
         public string entry;
+        public Dictionary<string, WorldAssetHash> assets;
 
         public static WorldConfig Load(string id)
         {
@@ -29,5 +31,12 @@ namespace Au
             var config = LitJson.JsonMapper.ToObject<WorldConfig>(json);
             return config;
         }
+    }
+
+    [Serializable]
+    public class WorldAssetHash
+    {
+        public string hash;
+        public int size;
     }
 }

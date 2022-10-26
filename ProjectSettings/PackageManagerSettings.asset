@@ -32,6 +32,7 @@ MonoBehaviour:
     - com.openupm
     - com.tencent.puerts.commonjs
     - com.tencent.puerts.core
+    - io.github.icsharpcode.sharpziplib
     - zes.au.core
     - zes.au.ts
     m_IsDefault: 0
