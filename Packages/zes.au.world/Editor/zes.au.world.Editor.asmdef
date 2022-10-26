@@ -3,6 +3,7 @@
     "rootNamespace": "",
     "references": [
         "zes.au.core",
+        "zes.au.core.Editor",
         "zes.au.ts",
         "zes.au.world",
 		"Unity.TextMeshPro",

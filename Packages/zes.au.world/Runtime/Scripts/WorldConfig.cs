@@ -9,16 +9,15 @@ namespace Au
     public class WorldConfig
     {
         public string id;
-        public string name;
         public string displayName;
         public string version;
-        public string[] scenes;
+        public string entry;
 
-        public static async Task<WorldConfig> Load(string id)
+        public static WorldConfig Load(string id)
         {
             var path = Path.Combine(Application.persistentDataPath, id);
 #if UNITY_EDITOR
-            path = Path.Combine("Assets", id, "config.json");
+            path = Path.Combine("Assets", "Worlds", id, "config.json");
 #endif
             if (!Files.Exists(path))
             {
@@ -26,7 +25,7 @@ namespace Au
                 return null;
             }
 
-            var json = await Files.Read(path);
+            var json = File.ReadAllText(path, Files.utf8WithoutBOM);
             var config = LitJson.JsonMapper.ToObject<WorldConfig>(json);
             return config;
         }

@@ -21,7 +21,7 @@ namespace Au
         public async Task<bool> Init(string id, Action<float> progress)
         {
             this.id = id;
-            config = await WorldConfig.Load(id);
+            config = WorldConfig.Load(id);
             Assert.IsNotNull(config, $"Load config of {id} failed");
             await Task.Yield();
             // TODO add patch functions
